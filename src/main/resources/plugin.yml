@@ -1,0 +1,9 @@
+name: EpicSkyblock
+version: 1.0.0
+description: Skyblock Redefined
+main: com.peaches.epicskyblock.EpicSkyblock
+author: Peaches_MLG
+commands:
+  island:
+    aliases: ["is", "EpicSkyblock"]
+    description: Main plugin command
