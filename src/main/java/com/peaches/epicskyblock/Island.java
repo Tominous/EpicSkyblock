@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Biome;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
@@ -75,7 +76,7 @@ public class Island {
             for (Entity e : c.getEntities()) {
                 if (e.getType() != EntityType.PLAYER) {
                     e.remove();
-                }else{
+                } else {
                     Player p = (Player) e;
                     NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, Integer.MAX_VALUE, getCenter());
                 }

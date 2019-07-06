@@ -16,7 +16,7 @@ class SkyblockGenerator extends ChunkGenerator {
         ChunkData chunkData = createChunkData(world);
         for (int x = 0; x <= 15; x++) {
             for (int z = 0; z <= 15; z++) {
-                biome.setBiome(x, z, Biome.OCEAN);
+                biome.setBiome(x, z, EpicSkyblock.getConfiguration().defaultBiome);
             }
         }
 
