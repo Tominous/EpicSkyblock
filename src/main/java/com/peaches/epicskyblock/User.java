@@ -11,11 +11,8 @@ public class User {
         EpicSkyblock.getIslandManager().users.put(this.player, this);
     }
 
-    public Island getIsland(){
-        if(EpicSkyblock.getIslandManager().islands.containsKey(islandID)){
-            return EpicSkyblock.getIslandManager().islands.get(islandID);
-        }
-        return null;
+    public Island getIsland() {
+        return EpicSkyblock.getIslandManager().islands.getOrDefault(islandID, null);
     }
 
     public static User getUser(String p) {

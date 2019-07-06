@@ -6,7 +6,6 @@ import org.bukkit.entity.Player;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.Method;
 
 public class NMSUtils {
 
@@ -95,7 +94,7 @@ public class NMSUtils {
             Object playerConnection = handle.getClass().getField("playerConnection").get(handle);
             playerConnection.getClass().getMethod("sendPacket", getNMSClass("Packet")).invoke(playerConnection, packet);
         } catch (Exception e) {
-            e.printStackTrace();
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
@@ -120,7 +119,7 @@ public class NMSUtils {
             field.setAccessible(true);
             field.set(object, fieldValue);
         } catch (Exception e) {
-            e.printStackTrace();
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 

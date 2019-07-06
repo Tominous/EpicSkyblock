@@ -4,12 +4,16 @@ import com.peaches.epicskyblock.commands.CommandManager;
 import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
 import com.peaches.epicskyblock.listeners.onBlockBreak;
+import com.peaches.epicskyblock.listeners.onBlockPlace;
+import com.peaches.epicskyblock.listeners.onClick;
 import com.peaches.epicskyblock.serializer.Persist;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 public class EpicSkyblock extends JavaPlugin {
 
@@ -43,11 +47,11 @@ public class EpicSkyblock extends JavaPlugin {
         loadConfigs();
         saveConfigs();
 
-        for(Island island : islandManager.islands.values()){
+        for (Island island : islandManager.islands.values()) {
             island.initChunks();
         }
 
-        registerListeners(new onBlockBreak());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick());
 
         getLogger().info("-------------------------------");
         getLogger().info("");
@@ -56,8 +60,14 @@ public class EpicSkyblock extends JavaPlugin {
         getLogger().info("-------------------------------");
     }
 
-    public void sendErrorMessage(Exception e){
-
+    public void sendErrorMessage(Exception e) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw, true);
+        e.printStackTrace(pw);
+        getLogger().info(sw.getBuffer().toString());
+        if (configuration == null || configuration.sendErrorReports) {
+            getLogger().info("Sending Error Report");
+        }
     }
 
     private void registerListeners(Listener... listener) {

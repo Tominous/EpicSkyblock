@@ -78,7 +78,7 @@ public class DiscUtil {
                 file.createNewFile();
                 Files.write(content.getBytes(), file);
             } catch (IOException e) {
-                e.printStackTrace();
+                EpicSkyblock.getInstance().sendErrorMessage(e);
             } finally {
                 lock.unlock();
             }
@@ -88,7 +88,7 @@ public class DiscUtil {
                 try {
                     write(file, content);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    EpicSkyblock.getInstance().sendErrorMessage(e);
                 } finally {
                     lock.unlock();
                 }

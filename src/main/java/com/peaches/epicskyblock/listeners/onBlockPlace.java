@@ -3,14 +3,12 @@ package com.peaches.epicskyblock.listeners;
 import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.Island;
 import com.peaches.epicskyblock.User;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 
-public class onBlockBreak implements Listener {
+public class onBlockPlace implements Listener {
 
-    @EventHandler
-    public void onBreakBlock(BlockBreakEvent e) {
+    public void onBlockPlace(BlockPlaceEvent e){
         User u = User.getUser(e.getPlayer().getName());
         if (e.getBlock().getLocation().getWorld().equals(EpicSkyblock.getIslandManager().getWorld())) {
             Island island = u.getIsland();
