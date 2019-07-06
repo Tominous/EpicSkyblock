@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreateCommand extends Command {
+public class DeleteCommand extends Command {
 
-    public CreateCommand() {
-        super(new ArrayList<>(Arrays.asList("create")), "EpicSkyblock.create", true);
+    public DeleteCommand() {
+        super(new ArrayList<>(Arrays.asList("delete")), "EpicSkyblock.delete", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player p = (Player) sender;
         if (EpicSkyblock.getIslandManager().islands.containsKey(p.getName())) {
-            sender.sendMessage("You already have an island");
+            EpicSkyblock.getIslandManager().islands.get(p.getName()).deleteBlocks();
         } else {
-            EpicSkyblock.getIslandManager().createIsland(p);
+            sender.sendMessage("You dont have an island");
         }
     }
 

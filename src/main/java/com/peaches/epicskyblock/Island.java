@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Island {
-    private List<Chunk> chunks;
+    private transient List<Chunk> chunks;
 
     private String owner;
     private Location pos1;
@@ -28,7 +28,10 @@ public class Island {
         this.pos2 = pos2;
         this.center = center;
         this.home = home;
+        initChunks();
+    }
 
+    public void initChunks() {
         chunks = new ArrayList<>();
         for (int X = getPos1().getChunk().getX(); X <= getPos2().getChunk().getX(); X++) {
             for (int Z = getPos1().getChunk().getZ(); Z <= getPos2().getChunk().getZ(); Z++) {
@@ -36,6 +39,7 @@ public class Island {
             }
         }
     }
+
 
     public void generateIsland() {
         deleteBlocks();
@@ -46,8 +50,9 @@ public class Island {
         }
     }
 
-    public void teleportHome(LivingEntity e) {
-        e.teleport(getHome());
+    public void teleportHome(Player p) {
+        p.teleport(getHome());
+        NMSUtils.sendBorder(p, getCenter().getX(), getCenter().getZ(), EpicSkyblock.getConfiguration().size / 2);
     }
 
 

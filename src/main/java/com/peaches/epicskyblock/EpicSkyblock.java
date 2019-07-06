@@ -88,6 +88,8 @@ public class EpicSkyblock extends JavaPlugin {
     public void onDisable() {
         super.onDisable();
 
+        saveConfigs();
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Disabled!");

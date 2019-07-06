@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class HomeCommand extends Command {
 
@@ -21,5 +22,10 @@ public class HomeCommand extends Command {
         } else {
             sender.sendMessage("You dont have an island");
         }
+    }
+
+    @Override
+    public List<String> TabComplete(CommandSender cs, org.bukkit.command.Command cmd, String s, String[] args) {
+        return null;
     }
 }

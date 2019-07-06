@@ -9,6 +9,7 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
 import java.beans.Customizer;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
     public void registerCommands() {
         new CreateCommand();
         new HomeCommand();
+        new DeleteCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {
@@ -60,6 +62,10 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender cs, Command cmd, String s, String[] args) {
+        if(args.length == 0)return new ArrayList<>(commands.keySet());
+        if(commands.containsKey(args[0])){
+            return commands.get(args[0]).TabComplete(cs, cmd, s, args);
+        }
         return null;
     }
 }

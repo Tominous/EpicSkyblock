@@ -14,7 +14,6 @@ public abstract class Command {
         this.aliases = aliases;
         this.permission = permission;
         this.player = player;
-        System.out.println(EpicSkyblock.getCommandManager());
         EpicSkyblock.getCommandManager().registerCommand(this);
     }
 
@@ -31,4 +30,6 @@ public abstract class Command {
     }
 
     public abstract void execute(CommandSender sender, String[] args);
+
+    public abstract List<String> TabComplete(CommandSender cs, org.bukkit.command.Command cmd, String s, String[] args);
 }

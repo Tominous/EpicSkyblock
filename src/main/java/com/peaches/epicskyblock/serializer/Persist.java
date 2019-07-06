@@ -3,11 +3,9 @@ package com.peaches.epicskyblock.serializer;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.peaches.epicskyblock.EpicSkyblock;
-import com.peaches.epicskyblock.serializer.typeadapter.ChunkTypeAdapter;
 import com.peaches.epicskyblock.serializer.typeadapter.EnumTypeAdapter;
 import com.peaches.epicskyblock.serializer.typeadapter.InventoryTypeAdapter;
 import com.peaches.epicskyblock.serializer.typeadapter.LocationTypeAdapter;
-import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.inventory.Inventory;
 
@@ -42,7 +40,6 @@ public class Persist {
                 .excludeFieldsWithModifiers(Modifier.TRANSIENT, Modifier.VOLATILE)
                 .registerTypeAdapter(Location.class, new LocationTypeAdapter())
                 .registerTypeAdapter(Inventory.class, new InventoryTypeAdapter())
-                .registerTypeAdapter(Chunk.class, new ChunkTypeAdapter())
                 .registerTypeAdapterFactory(EnumTypeAdapter.ENUM_FACTORY);
     }
 
