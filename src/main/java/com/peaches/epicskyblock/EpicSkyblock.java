@@ -3,7 +3,9 @@ package com.peaches.epicskyblock;
 import com.peaches.epicskyblock.commands.CommandManager;
 import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
+import com.peaches.epicskyblock.configs.OreGen;
 import com.peaches.epicskyblock.listeners.onBlockBreak;
+import com.peaches.epicskyblock.listeners.onBlockFromTo;
 import com.peaches.epicskyblock.listeners.onBlockPlace;
 import com.peaches.epicskyblock.listeners.onClick;
 import com.peaches.epicskyblock.serializer.Persist;
@@ -20,6 +22,7 @@ public class EpicSkyblock extends JavaPlugin {
     private static EpicSkyblock instance;
 
     private static Config configuration;
+    private static OreGen oreGen;
     private static Messages messages;
     private static Persist persist;
 
@@ -51,7 +54,7 @@ public class EpicSkyblock extends JavaPlugin {
             island.initChunks();
         }
 
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo());
 
         getLogger().info("-------------------------------");
         getLogger().info("");
@@ -90,27 +93,17 @@ public class EpicSkyblock extends JavaPlugin {
     }
 
     public void loadConfigs() {
-        if (persist.getFile(Config.class).exists()) {
-            configuration = persist.load(Config.class);
-        } else {
-            configuration = new Config();
-        }
-        if (persist.getFile(IslandManager.class).exists()) {
-            islandManager = persist.load(IslandManager.class);
-        } else {
-            islandManager = new IslandManager();
-        }
-        if (persist.getFile(Messages.class).exists()) {
-            messages = persist.load(Messages.class);
-        } else {
-            messages = new Messages();
-        }
+        configuration = persist.getFile(Config.class).exists() ? persist.load(Config.class) : new Config();
+        islandManager = persist.getFile(IslandManager.class).exists() ? persist.load(IslandManager.class) : new IslandManager();
+        messages = persist.getFile(Messages.class).exists() ? persist.load(Messages.class) : new Messages();
+        oreGen = persist.getFile(OreGen.class).exists() ? persist.load(OreGen.class) : new OreGen();
     }
 
     public void saveConfigs() {
         persist.save(configuration);
         persist.save(islandManager);
         persist.save(messages);
+        persist.save(oreGen);
     }
 
     @Override
@@ -144,5 +137,9 @@ public class EpicSkyblock extends JavaPlugin {
 
     public static Messages getMessages() {
         return messages;
+    }
+
+    public static OreGen getOreGen() {
+        return oreGen;
     }
 }
