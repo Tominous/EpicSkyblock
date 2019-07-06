@@ -17,7 +17,7 @@ public class IslandManager {
     public HashMap<Integer, Island> islands = new HashMap<>();
     public HashMap<String, User> users = new HashMap<>();
 
-    public Direction direction = Direction.UNDEFINED;
+    public Direction direction = Direction.NORTH;
     public String worldName = "EpicSkyblock";
     public Location nextLocation;
 
@@ -48,6 +48,8 @@ public class IslandManager {
         island.teleportHome(player);
 
         NMSUtils.sendTitle(player, "&e&lIsland Created", 20, 40, 20);
+
+        //TODO fix this cuz it doesnt work for some reason
 
         //Preparing for next Island
         direction = direction.next();

@@ -7,6 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,6 +28,9 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         new RegenCommand();
         new InviteCommand();
         new JoinCommand();
+        new MissionsCommand();
+        new UpgradeCommand();
+        new BoosterCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {

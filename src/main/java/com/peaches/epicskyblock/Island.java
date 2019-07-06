@@ -1,5 +1,8 @@
 package com.peaches.epicskyblock;
 
+import com.peaches.epicskyblock.gui.BoosterGUI;
+import com.peaches.epicskyblock.gui.MissionsGUI;
+import com.peaches.epicskyblock.gui.UpgradeGUI;
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
@@ -25,6 +28,10 @@ public class Island {
     private Location center;
     private Location home;
 
+    private transient UpgradeGUI upgradeGUI;
+    private transient BoosterGUI boosterGUI;
+    private transient MissionsGUI missionsGUI;
+
     private int id;
 
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
@@ -35,6 +42,9 @@ public class Island {
         this.home = home;
         this.members = new ArrayList<>(Collections.singletonList(owner.getName()));
         this.id = id;
+        upgradeGUI = new UpgradeGUI(this);
+        boosterGUI = new BoosterGUI(this);
+        missionsGUI = new MissionsGUI(this);
         initChunks();
     }
 
@@ -131,5 +141,20 @@ public class Island {
 
     public int getId() {
         return id;
+    }
+
+    public UpgradeGUI getUpgradeGUI() {
+        if (upgradeGUI == null) upgradeGUI = new UpgradeGUI(this);
+        return upgradeGUI;
+    }
+
+    public BoosterGUI getBoosterGUI() {
+        if (boosterGUI == null) boosterGUI = new BoosterGUI(this);
+        return boosterGUI;
+    }
+
+    public MissionsGUI getMissionsGUI() {
+        if (missionsGUI == null) missionsGUI = new MissionsGUI(this);
+        return missionsGUI;
     }
 }
