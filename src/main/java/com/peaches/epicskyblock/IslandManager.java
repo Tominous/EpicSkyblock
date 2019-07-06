@@ -14,11 +14,14 @@ import java.util.HashSet;
 
 public class IslandManager {
 
-    public HashMap<String, Island> islands = new HashMap<>();
+    public HashMap<Integer, Island> islands = new HashMap<>();
+    public HashMap<String, User> users = new HashMap<>();
 
     public Direction direction = Direction.UNDEFINED;
     public String worldName = "EpicSkyblock";
     public Location nextLocation;
+
+    public int nextID = 1;
 
     public IslandManager() {
         makeWorld();
@@ -32,8 +35,14 @@ public class IslandManager {
     }
 
     public Island createIsland(Player player) {
-        Island island = new Island(player, getNextLocation().clone().subtract(EpicSkyblock.getConfiguration().size / 2, 0, EpicSkyblock.getConfiguration().size / 2), getNextLocation().clone().add(EpicSkyblock.getConfiguration().size / 2, getWorld().getMaxHeight(), EpicSkyblock.getConfiguration().size / 2), getNextLocation().clone().add(0, 100, 0), getNextLocation().clone().add(0.5, 97, -1.5));
-        islands.put(player.getName(), island);
+        Location pos1 = nextLocation.clone().subtract(EpicSkyblock.getConfiguration().size / 2, 0, EpicSkyblock.getConfiguration().size / 2);
+        Location pos2 = nextLocation.clone().add(EpicSkyblock.getConfiguration().size / 2, 0, EpicSkyblock.getConfiguration().size / 2);
+        Location center = nextLocation.clone().add(0, 100, 0);
+        Location home = nextLocation.clone().add(0.5, 97, -1.5);
+        Island island = new Island(player, pos1, pos2, center, home);
+        islands.put(nextID, island);
+
+        User.getUser(player.getName()).islandID = nextID;
 
         island.generateIsland();
         island.teleportHome(player);
@@ -44,15 +53,17 @@ public class IslandManager {
         direction = direction.next();
         switch (direction) {
             case NORTH:
-                getNextLocation().add(EpicSkyblock.getConfiguration().distance, 0, 0);
+                nextLocation.add(EpicSkyblock.getConfiguration().distance, 0, 0);
             case EAST:
-                getNextLocation().add(0, 0, EpicSkyblock.getConfiguration().distance);
+                nextLocation.add(0, 0, EpicSkyblock.getConfiguration().distance);
             case SOUTH:
-                getNextLocation().subtract(EpicSkyblock.getConfiguration().distance, 0, 0);
+                nextLocation.subtract(EpicSkyblock.getConfiguration().distance, 0, 0);
             case WEST:
-                getNextLocation().subtract(0, 0, EpicSkyblock.getConfiguration().distance);
+                nextLocation.subtract(0, 0, EpicSkyblock.getConfiguration().distance);
         }
         EpicSkyblock.getInstance().saveConfigs();
+
+        nextID++;
 
         return island;
     }
@@ -81,9 +92,5 @@ public class IslandManager {
         }
         if (schematic == null) schematic = Schematic.loadSchematic(schematicFile);
         return schematic;
-    }
-
-    public Location getNextLocation() {
-        return nextLocation;
     }
 }

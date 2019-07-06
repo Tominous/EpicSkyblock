@@ -3,7 +3,10 @@ package com.peaches.epicskyblock;
 import com.peaches.epicskyblock.commands.CommandManager;
 import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
+import com.peaches.epicskyblock.listeners.onBlockBreak;
 import com.peaches.epicskyblock.serializer.Persist;
+import org.bukkit.Bukkit;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -40,11 +43,27 @@ public class EpicSkyblock extends JavaPlugin {
         loadConfigs();
         saveConfigs();
 
+        for(Island island : islandManager.islands.values()){
+            island.initChunks();
+        }
+
+        registerListeners(new onBlockBreak());
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Enabled!");
         getLogger().info("");
         getLogger().info("-------------------------------");
+    }
+
+    public void sendErrorMessage(Exception e){
+
+    }
+
+    private void registerListeners(Listener... listener) {
+        for (Listener l : listener) {
+            Bukkit.getPluginManager().registerEvents(l, this);
+        }
     }
 
     public void loadSchematic() {

@@ -40,21 +40,24 @@ public class Island {
         }
     }
 
-
     public void generateIsland() {
         deleteBlocks();
         try {
-            EpicSkyblock.getIslandManager().getSchematic().pasteSchematic(getCenter());
+            EpicSkyblock.getIslandManager().getSchematic().pasteSchematic(getCenter().clone());
         } catch (IOException e) {
-            e.printStackTrace();
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
     public void teleportHome(Player p) {
         p.teleport(getHome());
-        NMSUtils.sendBorder(p, getCenter().getX(), getCenter().getZ(), EpicSkyblock.getConfiguration().size / 2);
+        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size / 2, getCenter());
     }
 
+    public void delete() {
+        deleteBlocks();
+        User.getUser(owner).islandID = 0;
+    }
 
     public void deleteBlocks() {
         for (double X = getPos1().getX(); X <= getPos2().getX(); X++) {
@@ -72,6 +75,9 @@ public class Island {
             for (Entity e : c.getEntities()) {
                 if (e.getType() != EntityType.PLAYER) {
                     e.remove();
+                }else{
+                    Player p = (Player) e;
+                    NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, Integer.MAX_VALUE, getCenter());
                 }
             }
         }

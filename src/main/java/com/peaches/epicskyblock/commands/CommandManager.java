@@ -1,14 +1,12 @@
 package com.peaches.epicskyblock.commands;
 
 import com.peaches.epicskyblock.EpicSkyblock;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-import java.beans.Customizer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -62,8 +60,8 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender cs, Command cmd, String s, String[] args) {
-        if(args.length == 0)return new ArrayList<>(commands.keySet());
-        if(commands.containsKey(args[0])){
+        if (args.length == 1) return new ArrayList<>(commands.keySet());
+        if (commands.containsKey(args[0])) {
             return commands.get(args[0]).TabComplete(cs, cmd, s, args);
         }
         return null;

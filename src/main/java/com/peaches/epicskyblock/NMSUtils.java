@@ -1,27 +1,44 @@
 package com.peaches.epicskyblock;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 public class NMSUtils {
 
-    public static void sendBorder(Player p, double x, double z, double radius) {
-        //TODO
+    public static void sendWorldBorder(Player player, Color color, double size, Location centerLocation) {
         try {
-            Class<?> worldborder = getNMSClass("WorldBorder");
-            Object worldborderinstance = getNMSClass("WorldBorder").newInstance();
+            if (size % 2 == 1) size++;
 
-            worldborder.getMethod("setCenter", double.class, double.class).invoke(worldborderinstance, x, z);
-            worldborder.getMethod("setSize", double.class).invoke(worldborderinstance, radius * 2);
+            Object worldBorder = getNMSClass("WorldBorder").getConstructor().newInstance();
+            Object craftWorld = getCraftClass("CraftWorld").cast(centerLocation.getWorld());
 
-            Object enumBorder = getNMSClass("PacketPlayOutWorldBorder").getDeclaredClasses()[0].getField("INITIALIZE").get(null);
-            Constructor<?> worldborderconstructor = getNMSClass("PacketPlayOutWorldBorder").getConstructor(getNMSClass("WorldBorder"), getNMSClass("PacketPlayOutWorldBorder").getDeclaredClasses()[0]);
-            Object worldborderPacket = worldborderconstructor.newInstance(worldborderinstance, enumBorder);
-            sendPacket(p, worldborderPacket);
-        }catch (Exception e){
-            e.printStackTrace();
+            setField(worldBorder, "world", craftWorld.getClass().getMethod("getHandle").invoke(craftWorld), false);
+
+            worldBorder.getClass().getMethod("setCenter", double.class, double.class).invoke(worldBorder, centerLocation.getBlockX(), centerLocation.getBlockZ());
+
+            worldBorder.getClass().getMethod("setSize", double.class).invoke(worldBorder, size);
+
+            worldBorder.getClass().getMethod("setWarningTime", int.class).invoke(worldBorder, 0);
+
+            if (color == Color.Green) {
+                worldBorder.getClass().getMethod("transitionSizeBetween", double.class,
+                        double.class, long.class).invoke(worldBorder, size - 0.1D, size, 20000000L);
+            } else if (color == Color.Red) {
+                worldBorder.getClass().getMethod("transitionSizeBetween", double.class,
+                        double.class, long.class).invoke(worldBorder, size, size - 1.0D, 20000000L);
+            }
+
+            Object packet = getNMSClass("PacketPlayOutWorldBorder").getConstructor(getNMSClass("WorldBorder"),
+                    getNMSClass("PacketPlayOutWorldBorder").getDeclaredClasses()[0]).newInstance(worldBorder,
+                    Enum.valueOf((Class<Enum>) getNMSClass("PacketPlayOutWorldBorder").getDeclaredClasses()[0], "INITIALIZE"));
+            sendPacket(player, packet);
+        } catch (Exception e) {
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
@@ -32,8 +49,8 @@ public class NMSUtils {
             Object text = getNMSClass("IChatBaseComponent").getDeclaredClasses()[0].getMethod("a", String.class).invoke(null, ChatColor.translateAlternateColorCodes('&', "{\"text\":\"" + message + "\"}"));
             Object packet = constructor.newInstance(text, (byte) 2);
             sendPacket(player, packet);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception e) {
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
@@ -49,8 +66,8 @@ public class NMSUtils {
             Object packet = titleConstructor.newInstance(enumTitle, chat, fadeIn, displayTime, fadeOut);
 
             sendPacket(player, packet);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception e) {
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
@@ -66,8 +83,8 @@ public class NMSUtils {
             Object packet = titleConstructor.newInstance(enumTitle, chat, fadeIn, displayTime, fadeOut);
 
             sendPacket(player, packet);
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception e) {
+            EpicSkyblock.getInstance().sendErrorMessage(e);
         }
     }
 
@@ -82,13 +99,36 @@ public class NMSUtils {
         }
     }
 
-    public static Class<?> getNMSClass(String name) {
-        String version = EpicSkyblock.getInstance().getServer().getClass().getPackage().getName().split("\\.")[3];
+    public static Class<?> getNMSClass(String name) throws ClassNotFoundException {
+        return Class.forName("net.minecraft.server." + getVersion() + "." + name);
+    }
+
+    public static Class<?> getCraftClass(String name) throws ClassNotFoundException {
+        return Class.forName("org.bukkit.craftbukkit." + getVersion() + "." + name);
+    }
+
+    public static void setField(Object object, String fieldName, Object fieldValue, boolean declared) {
         try {
-            return Class.forName("net.minecraft.server." + version + "." + name);
-        } catch (ClassNotFoundException e) {
+            Field field;
+
+            if (declared) {
+                field = object.getClass().getDeclaredField(fieldName);
+            } else {
+                field = object.getClass().getField(fieldName);
+            }
+
+            field.setAccessible(true);
+            field.set(object, fieldValue);
+        } catch (Exception e) {
             e.printStackTrace();
-            return null;
         }
+    }
+
+    public static String getVersion() {
+        return EpicSkyblock.getInstance().getServer().getClass().getPackage().getName().split("\\.")[3];
+    }
+
+    public enum Color {
+        Blue, Green, Red
     }
 }

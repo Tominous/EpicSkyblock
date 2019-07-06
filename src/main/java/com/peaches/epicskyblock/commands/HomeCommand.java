@@ -1,6 +1,6 @@
 package com.peaches.epicskyblock.commands;
 
-import com.peaches.epicskyblock.EpicSkyblock;
+import com.peaches.epicskyblock.User;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -17,8 +17,9 @@ public class HomeCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player p = (Player) sender;
-        if (EpicSkyblock.getIslandManager().islands.containsKey(p.getName())) {
-            EpicSkyblock.getIslandManager().islands.get(p.getName()).teleportHome(p);
+        User user = User.getUser(p.getName());
+        if (user.getIsland() != null) {
+            user.getIsland().teleportHome(p);
         } else {
             sender.sendMessage("You dont have an island");
         }

@@ -1,6 +1,7 @@
 package com.peaches.epicskyblock.commands;
 
 import com.peaches.epicskyblock.EpicSkyblock;
+import com.peaches.epicskyblock.User;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -17,7 +18,8 @@ public class CreateCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         Player p = (Player) sender;
-        if (EpicSkyblock.getIslandManager().islands.containsKey(p.getName())) {
+        User user = User.getUser(p.getName());
+        if (user.getIsland() != null) {
             sender.sendMessage("You already have an island");
         } else {
             EpicSkyblock.getIslandManager().createIsland(p);
