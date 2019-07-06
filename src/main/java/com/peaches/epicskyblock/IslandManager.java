@@ -39,7 +39,7 @@ public class IslandManager {
         Location pos2 = nextLocation.clone().add(EpicSkyblock.getConfiguration().size / 2, 0, EpicSkyblock.getConfiguration().size / 2);
         Location center = nextLocation.clone().add(0, 100, 0);
         Location home = nextLocation.clone().add(0.5, 97, -1.5);
-        Island island = new Island(player, pos1, pos2, center, home);
+        Island island = new Island(player, pos1, pos2, center, home, nextID);
         islands.put(nextID, island);
 
         User.getUser(player.getName()).islandID = nextID;

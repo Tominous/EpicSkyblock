@@ -12,24 +12,35 @@ import org.bukkit.entity.Player;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Island {
     private transient List<Chunk> chunks;
 
     private String owner;
+    private List<String> members;
     private Location pos1;
     private Location pos2;
     private Location center;
     private Location home;
 
-    public Island(Player owner, Location pos1, Location pos2, Location center, Location home) {
+    private int id;
+
+    public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
         this.pos2 = pos2;
         this.center = center;
         this.home = home;
+        this.members = new ArrayList<>(Collections.singletonList(owner.getName()));
+        this.id = id;
         initChunks();
+    }
+
+    public void addUser(User user) {
+        user.islandID = id;
+        members.add(user.player);
     }
 
     public void initChunks() {
