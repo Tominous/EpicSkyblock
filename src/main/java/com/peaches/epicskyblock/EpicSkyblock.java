@@ -56,6 +56,8 @@ public class EpicSkyblock extends JavaPlugin {
 
         registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo());
 
+        new Metrics(this);
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Enabled!");
