@@ -4,10 +4,7 @@ import com.peaches.epicskyblock.commands.CommandManager;
 import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
 import com.peaches.epicskyblock.configs.OreGen;
-import com.peaches.epicskyblock.listeners.onBlockBreak;
-import com.peaches.epicskyblock.listeners.onBlockFromTo;
-import com.peaches.epicskyblock.listeners.onBlockPlace;
-import com.peaches.epicskyblock.listeners.onClick;
+import com.peaches.epicskyblock.listeners.*;
 import com.peaches.epicskyblock.serializer.Persist;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
@@ -54,7 +51,7 @@ public class EpicSkyblock extends JavaPlugin {
             island.initChunks();
         }
 
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove());
 
         new Metrics(this);
 
