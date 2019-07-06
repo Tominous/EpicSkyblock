@@ -68,18 +68,30 @@ public class Island {
 
     public void delete() {
         deleteBlocks();
-        User.getUser(owner).islandID = 0;
+        killEntities();
+        for (String player : members) {
+            User.getUser(player).islandID = 0;
+        }
+        this.owner = null;
+        this.pos1 = null;
+        this.pos2 = null;
+        this.members = null;
+        this.chunks = null;
+        this.center = null;
+        this.home = null;
+        EpicSkyblock.getIslandManager().islands.remove(this.id);
+        this.id = 0;
+        EpicSkyblock.getInstance().saveConfigs();
     }
 
     public void deleteBlocks() {
         for (double X = getPos1().getX(); X <= getPos2().getX(); X++) {
-            for (double Y = getPos1().getY(); Y <= getPos2().getY(); Y++) {
+            for (double Y = 0; Y <= EpicSkyblock.getIslandManager().getWorld().getMaxHeight(); Y++) {
                 for (double Z = getPos1().getZ(); Z <= getPos2().getZ(); Z++) {
-                    EpicSkyblock.getIslandManager().getWorld().getBlockAt(new Location(EpicSkyblock.getIslandManager().getWorld(), X, Y, Z)).setType(Material.AIR, false);
+                    new Location(getPos1().getWorld(), X, Y, Z).getBlock().setType(Material.AIR, false);
                 }
             }
         }
-        killEntities();
     }
 
     public void killEntities() {
