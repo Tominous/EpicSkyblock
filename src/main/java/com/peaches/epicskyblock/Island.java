@@ -54,6 +54,7 @@ public class Island {
 
     public void generateIsland() {
         deleteBlocks();
+        killEntities();
         try {
             EpicSkyblock.getIslandManager().getSchematic().pasteSchematic(getCenter().clone());
         } catch (IOException e) {
