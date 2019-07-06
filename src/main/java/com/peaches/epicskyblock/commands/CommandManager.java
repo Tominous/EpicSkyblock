@@ -23,6 +23,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         new CreateCommand();
         new HomeCommand();
         new DeleteCommand();
+        new ReloadCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {
