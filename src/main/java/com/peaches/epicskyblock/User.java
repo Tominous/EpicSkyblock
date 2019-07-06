@@ -1,11 +1,15 @@
 package com.peaches.epicskyblock;
 
+import java.util.ArrayList;
+
 public class User {
 
     public String player;
     public int islandID;
+    public ArrayList<Integer> invites;
 
     public User(String player) {
+        invites = new ArrayList<>();
         this.player = player;
         this.islandID = 0;
         EpicSkyblock.getIslandManager().users.put(this.player, this);

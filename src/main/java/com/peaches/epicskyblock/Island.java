@@ -40,6 +40,7 @@ public class Island {
 
     public void addUser(User user) {
         user.islandID = id;
+        user.invites.clear();
         members.add(user.player);
     }
 
@@ -128,4 +129,7 @@ public class Island {
         return Bukkit.getPlayer(owner);
     }
 
+    public int getId() {
+        return id;
+    }
 }

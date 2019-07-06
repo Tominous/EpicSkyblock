@@ -12,7 +12,7 @@ import java.util.List;
 public class DeleteCommand extends Command {
 
     public DeleteCommand() {
-        super(new ArrayList<>(Arrays.asList("delete")), "EpicSkyblock.delete", true);
+        super(new ArrayList<>(Arrays.asList("delete")), "", true);
     }
 
     @Override

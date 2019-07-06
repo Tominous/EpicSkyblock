@@ -1,6 +1,5 @@
 package com.peaches.epicskyblock.commands;
 
-import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -9,20 +8,29 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class CreateCommand extends Command {
+public class InviteCommand extends Command {
 
-    public CreateCommand() {
-        super(new ArrayList<>(Arrays.asList("create")), "", true);
+    public InviteCommand() {
+        super(new ArrayList<>(Arrays.asList("invite")), "", false);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
+        if (args.length != 2) {
+            sender.sendMessage("/is invite <player>");
+            return;
+        }
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
+        User u = User.getUser(args[1]);
         if (user.getIsland() != null) {
-            sender.sendMessage("You already have an island");
+            if (u.getIsland() == null) {
+                u.invites.add(user.getIsland().getId());
+            } else {
+                sender.sendMessage("Player already has an island");
+            }
         } else {
-            EpicSkyblock.getIslandManager().createIsland(p);
+            sender.sendMessage("You dont have an island");
         }
     }
 

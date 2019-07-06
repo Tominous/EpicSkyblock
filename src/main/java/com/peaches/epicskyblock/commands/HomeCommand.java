@@ -11,7 +11,7 @@ import java.util.List;
 public class HomeCommand extends Command {
 
     public HomeCommand() {
-        super(new ArrayList<>(Arrays.asList("home")), "EpicSkyblock.home", true);
+        super(new ArrayList<>(Arrays.asList("home")), "", true);
     }
 
     @Override

@@ -25,6 +25,8 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         new DeleteCommand();
         new ReloadCommand();
         new RegenCommand();
+        new InviteCommand();
+        new JoinCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {
@@ -42,7 +44,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
             if (commands.containsKey(args[0])) {
                 com.peaches.epicskyblock.commands.Command command = commands.get(args[0]);
                 if (!command.isPlayer() || cs instanceof Player) {
-                    if (cs.hasPermission(command.getPermission())) {
+                    if (cs.hasPermission(command.getPermission()) || command.getPermission().isEmpty()) {
                         command.execute(cs, args);
                     } else {
                         // No permission
