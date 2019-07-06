@@ -55,6 +55,8 @@ public class EpicSkyblock extends JavaPlugin {
 
         new Metrics(this);
 
+        Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> getPersist().save(islandManager), 0, 20);
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Enabled!");
