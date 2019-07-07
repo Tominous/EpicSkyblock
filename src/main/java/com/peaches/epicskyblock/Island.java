@@ -46,6 +46,8 @@ public class Island {
     private int crystals;
 
     private int sizeLevel;
+    private int memberLevel;
+    private int warpLevel;
 
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
@@ -65,13 +67,21 @@ public class Island {
         flightBooster = 0;
         crystals = 0;
         sizeLevel = 1;
+        memberLevel = 1;
+        warpLevel = 1;
         init();
     }
 
     public void addUser(User user) {
-        user.islandID = id;
-        user.invites.clear();
-        members.add(user.player);
+        if (members.size() < EpicSkyblock.getConfiguration().member.get(memberLevel).getSize()) {
+            user.islandID = id;
+            user.invites.clear();
+            members.add(user.player);
+            teleportHome(Bukkit.getPlayer(user.player));
+            user.invites.clear();
+        } else {
+            Bukkit.getPlayer(user.player).sendMessage("Max Member Count reached");
+        }
     }
 
     public boolean isInIsland(Location location) {
@@ -273,5 +283,21 @@ public class Island {
 
         pos1 = getCenter().clone().subtract(EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2);
         pos2 = getCenter().clone().add(EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2);
+    }
+
+    public int getMemberLevel() {
+        return memberLevel;
+    }
+
+    public void setMemberLevel(int memberLevel) {
+        this.memberLevel = memberLevel;
+    }
+
+    public int getWarpLevel() {
+        return warpLevel;
+    }
+
+    public void setWarpLevel(int warpLevel) {
+        this.warpLevel = warpLevel;
     }
 }

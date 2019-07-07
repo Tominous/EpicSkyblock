@@ -32,15 +32,28 @@ public class UpgradeGUI {
         for (int i = 0; i < 27; i++) {
             inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
         }
-        String cost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Crystals" : "Max Level Reached";
-        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentsize, "&b&l * &7Current Size: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blocks", "&b&l * &7Upgrade Cost: &b" + cost, "", "&b&lLevels:"));
+        String sizecost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Crystals" : "Max Level Reached";
+        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentsize, "&b&l * &7Current Size: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blocks", "&b&l * &7Upgrade Cost: &b" + sizecost, "", "&b&lLevels:"));
         for (int level : EpicSkyblock.getConfiguration().size.keySet()) {
             sizeLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().size.get(level).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(level).getSize() + " Blocks");
         }
         sizeLore.add("");
         sizeLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");
         this.size = Utils.makeItem(Material.GRASS, 1, 0, "&b&lIsland Size", Utils.color(sizeLore));
-        this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lIsland Member Count", Utils.color(new ArrayList<>(Arrays.asList("&7Need more members? Buy this", "&7upgrade to increase your member count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b", "&b&l * &7Current Size: &b", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:", "", "&b&l[!] &bRight Click to Purchase this Upgrade"))));
+
+
+        int currentmember = EpicSkyblock.getIslandManager().islands.get(islandID).getMemberLevel();
+        for (int i = 0; i < 27; i++) {
+            inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
+        }
+        String membercost = EpicSkyblock.getConfiguration().member.containsKey(currentmember + 1) ? EpicSkyblock.getConfiguration().member.get(currentmember + 1).getCost() + " Crystals" : "Max Level Reached";
+        List<String> memberLore = new ArrayList<>(Arrays.asList("&7Need more members? Buy this", "&7upgrade to increase your member count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentmember, "&b&l * &7Current Members: &b" + EpicSkyblock.getConfiguration().member.get(currentmember).getSize() + " Members", "&b&l * &7Upgrade Cost: &b" + membercost, "", "&b&lLevels:"));
+        for (int level : EpicSkyblock.getConfiguration().size.keySet()) {
+            memberLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().member.get(level).getSize() + " Members");
+        }
+        memberLore.add("");
+        memberLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");
+        this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lIsland Member Count", Utils.color(memberLore));
         this.warp = Utils.makeItem(Material.ENDER_PORTAL_FRAME, 1, 0, "&b&lIsland Warp", Utils.color(new ArrayList<>(Arrays.asList("&7Need more island warps? Buy this", "&7upgrade to increase your warp count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b", "&b&l * &7Current Size: &b", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:", "", "&b&l[!] &bRight Click to Purchase this Upgrade"))));
         inventory.setItem(10, size);
         inventory.setItem(13, member);

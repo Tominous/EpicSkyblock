@@ -85,6 +85,18 @@ public class onInventoryClick implements Listener {
                         p.sendMessage("Maximum Level reached");
                     }
                 }
+                if (e.getCurrentItem().equals(user.getIsland().getUpgradeGUI().member)) {
+                    if (EpicSkyblock.getConfiguration().member.containsKey(user.getIsland().getMemberLevel() + 1)) {
+                        if (user.getIsland().getCrystals() >= EpicSkyblock.getConfiguration().member.get(user.getIsland().getMemberLevel() + 1).getCost()) {
+                            user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().member.get(user.getIsland().getMemberLevel() + 1).getCost());
+                            user.getIsland().setMemberLevel(user.getIsland().getMemberLevel() + 1);
+                        } else {
+                            p.sendMessage("You dont have enough Crystals");
+                        }
+                    } else {
+                        p.sendMessage("Maximum Level reached");
+                    }
+                }
             }
             if (e.getInventory().equals(user.getIsland().getMembersGUI().inventory)) {
                 e.setCancelled(true);

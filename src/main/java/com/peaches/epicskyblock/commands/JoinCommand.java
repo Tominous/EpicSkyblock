@@ -31,8 +31,6 @@ public class JoinCommand extends Command {
                     Island island = u.getIsland();
                     if (user.invites.contains(island.getId())) {
                         island.addUser(user);
-                        island.teleportHome(p);
-                        user.invites.clear();
                     } else {
                         sender.sendMessage("You dont have any active invites for this island");
                     }
