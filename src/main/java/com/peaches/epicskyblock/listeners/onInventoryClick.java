@@ -1,6 +1,7 @@
 package com.peaches.epicskyblock.listeners;
 
 import com.peaches.epicskyblock.EpicSkyblock;
+import com.peaches.epicskyblock.Island;
 import com.peaches.epicskyblock.NMSUtils;
 import com.peaches.epicskyblock.User;
 import org.bukkit.entity.Player;
@@ -112,6 +113,20 @@ public class onInventoryClick implements Listener {
             }
             if (e.getInventory().equals(user.getIsland().getMembersGUI().inventory)) {
                 e.setCancelled(true);
+            }
+            if (e.getInventory().equals(user.getIsland().getWarpGUI().inventory)) {
+                e.setCancelled(true);
+                if (user.getIsland().getWarpGUI().warps.containsKey(e.getSlot())) {
+                    Island.Warp warp = user.getIsland().getWarpGUI().warps.get(e.getSlot());
+                    if (warp.getPassword().isEmpty()) {
+                        p.teleport(warp.getLocation());
+                        p.sendMessage("Teleporting...");
+                    } else {
+                        p.sendMessage("Enter the password");
+                        user.warp = warp;
+                    }
+                    p.closeInventory();
+                }
             }
         }
     }

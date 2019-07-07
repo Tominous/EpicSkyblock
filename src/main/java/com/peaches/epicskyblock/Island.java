@@ -1,9 +1,6 @@
 package com.peaches.epicskyblock;
 
-import com.peaches.epicskyblock.gui.BoosterGUI;
-import com.peaches.epicskyblock.gui.MembersGUI;
-import com.peaches.epicskyblock.gui.MissionsGUI;
-import com.peaches.epicskyblock.gui.UpgradeGUI;
+import com.peaches.epicskyblock.gui.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
@@ -20,6 +17,31 @@ import java.util.Collections;
 import java.util.List;
 
 public class Island {
+
+    public class Warp {
+        Location location;
+        String name;
+        String password;
+
+        public Warp(Location location, String name, String password) {
+            this.location = location;
+            this.name = name;
+            this.password = password;
+        }
+
+        public Location getLocation() {
+            return location;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getPassword() {
+            return password;
+        }
+    }
+
     private transient List<Chunk> chunks;
 
     private String owner;
@@ -33,6 +55,7 @@ public class Island {
     private transient BoosterGUI boosterGUI;
     private transient MissionsGUI missionsGUI;
     private transient MembersGUI membersGUI;
+    private transient WarpGUI warpGUI;
 
     private int id;
 
@@ -49,6 +72,8 @@ public class Island {
     private int memberLevel;
     private int warpLevel;
 
+    private List<Warp> warps;
+
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
@@ -61,6 +86,7 @@ public class Island {
         boosterGUI = new BoosterGUI(this);
         missionsGUI = new MissionsGUI(this);
         membersGUI = new MembersGUI(this);
+        warpGUI = new WarpGUI(this);
         spawnerBooster = 0;
         farmingBooster = 0;
         expBooster = 0;
@@ -69,7 +95,17 @@ public class Island {
         sizeLevel = 1;
         memberLevel = 1;
         warpLevel = 1;
+        warps = new ArrayList<>();
         init();
+    }
+
+    public void addWarp(Player player, Location location, String name, String password) {
+        if (warps.size() < EpicSkyblock.getConfiguration().warp.get(warpLevel).getSize()) {
+            warps.add(new Warp(location, name, password));
+            player.sendMessage("Warp added");
+        } else {
+            player.sendMessage("Max warps reached");
+        }
     }
 
     public void addUser(User user) {
@@ -230,6 +266,11 @@ public class Island {
         return membersGUI;
     }
 
+    public WarpGUI getWarpGUI() {
+        if (warpGUI == null) warpGUI = new WarpGUI(this);
+        return warpGUI;
+    }
+
     public int getSpawnerBooster() {
         return spawnerBooster;
     }
@@ -299,5 +340,9 @@ public class Island {
 
     public void setWarpLevel(int warpLevel) {
         this.warpLevel = warpLevel;
+    }
+
+    public List<Warp> getWarps() {
+        return warps;
     }
 }

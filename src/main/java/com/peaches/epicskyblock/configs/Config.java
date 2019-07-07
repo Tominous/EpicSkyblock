@@ -11,6 +11,7 @@ public class Config {
     public String BoosterGUITitle = "&7Booster";
     public String MissionsGUITitle = "&7Missions";
     public String MembersGUITitle = "&7Members";
+    public String WarpGUITitle = "&7Warps";
     public boolean sendErrorReports = true;
     public int distance = 200;
     public HashMap<Integer, Upgrade> size = new HashMap<Integer, Upgrade>() {{

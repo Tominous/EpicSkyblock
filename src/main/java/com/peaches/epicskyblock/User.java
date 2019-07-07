@@ -7,6 +7,7 @@ public class User {
     public String player;
     public int islandID;
     public ArrayList<Integer> invites;
+    public Island.Warp warp;
 
     public User(String player) {
         invites = new ArrayList<>();
