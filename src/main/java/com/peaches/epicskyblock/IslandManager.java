@@ -35,8 +35,8 @@ public class IslandManager {
     }
 
     public Island createIsland(Player player) {
-        Location pos1 = nextLocation.clone().subtract(EpicSkyblock.getConfiguration().size.get(1) / 2, 0, EpicSkyblock.getConfiguration().size.get(1) / 2);
-        Location pos2 = nextLocation.clone().add(EpicSkyblock.getConfiguration().size.get(1) / 2, 0, EpicSkyblock.getConfiguration().size.get(1) / 2);
+        Location pos1 = nextLocation.clone().subtract(EpicSkyblock.getConfiguration().size.get(1).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(1).getSize() / 2);
+        Location pos2 = nextLocation.clone().add(EpicSkyblock.getConfiguration().size.get(1).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(1).getSize() / 2);
         Location center = nextLocation.clone().add(0, 100, 0);
         Location home = nextLocation.clone().add(0.5, 97, -1.5);
         Island island = new Island(player, pos1, pos2, center, home, nextID);

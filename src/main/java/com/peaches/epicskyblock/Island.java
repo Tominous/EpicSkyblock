@@ -120,7 +120,7 @@ public class Island {
 
     public void teleportHome(Player p) {
         p.teleport(getHome());
-        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel), getCenter());
+        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
     }
 
     public void delete() {
@@ -271,7 +271,7 @@ public class Island {
     public void setSizeLevel(int sizeLevel) {
         this.sizeLevel = sizeLevel;
 
-        pos1 = getCenter().clone().subtract(EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2);
-        pos2 = getCenter().clone().add(EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2);
+        pos1 = getCenter().clone().subtract(EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2);
+        pos2 = getCenter().clone().add(EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize() / 2);
     }
 }

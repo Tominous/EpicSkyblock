@@ -74,8 +74,15 @@ public class onInventoryClick implements Listener {
                 e.setCancelled(true);
                 if (e.getCurrentItem().equals(user.getIsland().getUpgradeGUI().size)) {
                     if (EpicSkyblock.getConfiguration().size.containsKey(user.getIsland().getSizeLevel() + 1)) {
-                        user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
-                        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()), user.getIsland().getCenter());
+                        if (user.getIsland().getCrystals() >= EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost()) {
+                            user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost());
+                            user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
+                            NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
+                        } else {
+                            p.sendMessage("You dont have enough Crystals");
+                        }
+                    } else {
+                        p.sendMessage("Maximum Level reached");
                     }
                 }
             }

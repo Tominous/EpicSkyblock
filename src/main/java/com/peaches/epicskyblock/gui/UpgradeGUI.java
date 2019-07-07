@@ -32,9 +32,10 @@ public class UpgradeGUI {
         for (int i = 0; i < 27; i++) {
             inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
         }
-        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" +currentsize, "&b&l * &7Current Size: &b"+EpicSkyblock.getConfiguration().size.get(currentsize)+"x"+EpicSkyblock.getConfiguration().size.get(currentsize)+" Blocks", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:"));
+        String cost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Crystals" : "Max Level Reached";
+        List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentsize, "&b&l * &7Current Size: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blocks", "&b&l * &7Upgrade Cost: &b" + cost, "", "&b&lLevels:"));
         for (int level : EpicSkyblock.getConfiguration().size.keySet()) {
-            sizeLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().size.get(level) + "x" + EpicSkyblock.getConfiguration().size.get(level) + " Blocks");
+            sizeLore.add("&b&l * &7Level " + level + ": &b" + EpicSkyblock.getConfiguration().size.get(level).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(level).getSize() + " Blocks");
         }
         sizeLore.add("");
         sizeLore.add("&b&l[!] &bRight Click to Purchase this Upgrade");

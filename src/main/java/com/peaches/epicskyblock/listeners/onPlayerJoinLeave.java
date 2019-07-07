@@ -15,7 +15,7 @@ public class onPlayerJoinLeave implements Listener {
         Bukkit.getScheduler().scheduleSyncDelayedTask(EpicSkyblock.getInstance(), () -> {
             Island island = EpicSkyblock.getIslandManager().getIslandViaLocation(e.getPlayer().getLocation());
             if (island != null) {
-                NMSUtils.sendWorldBorder(e.getPlayer(), NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(island.getSizeLevel()), island.getCenter());
+                NMSUtils.sendWorldBorder(e.getPlayer(), NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(island.getSizeLevel()).getSize(), island.getCenter());
             }
         }, 1);
     }
