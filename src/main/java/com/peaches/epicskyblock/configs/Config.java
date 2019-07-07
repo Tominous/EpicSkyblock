@@ -23,6 +23,11 @@ public class Config {
         put(2, new Upgrade(18, 15));
         put(3, new Upgrade(27, 15));
     }};
+    public HashMap<Integer, Upgrade> warp = new HashMap<Integer, Upgrade>() {{
+        put(1, new Upgrade(2, 15));
+        put(2, new Upgrade(5, 15));
+        put(3, new Upgrade(9, 15));
+    }};
     public Biome defaultBiome = Biome.PLAINS;
     public int spawnerBoosterCost = 15;
     public int farmingBoosterCost = 15;
