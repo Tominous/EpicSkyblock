@@ -14,7 +14,7 @@ public class onInventoryClick implements Listener {
         if (user.getIsland() != null) {
             if (e.getInventory().equals(user.getIsland().getBoosterGUI().inventory)) {
                 e.setCancelled(true);
-                if(e.getCurrentItem() == null)return;
+                if (e.getCurrentItem() == null) return;
                 if (e.getCurrentItem().equals(user.getIsland().getBoosterGUI().spawner)) {
                     if (user.getIsland().getCrystals() >= EpicSkyblock.getConfiguration().spawnerBoosterCost) {
                         if (user.getIsland().getSpawnerBooster() == 0) {
@@ -68,6 +68,9 @@ public class onInventoryClick implements Listener {
                 e.setCancelled(true);
             }
             if (e.getInventory().equals(user.getIsland().getUpgradeGUI().inventory)) {
+                e.setCancelled(true);
+            }
+            if (e.getInventory().equals(user.getIsland().getMembersGUI().inventory)) {
                 e.setCancelled(true);
             }
         }

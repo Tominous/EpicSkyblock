@@ -8,6 +8,7 @@ public class Config {
     public String UpgradeGUITitle = "&7Upgrade";
     public String BoosterGUITitle = "&7Booster";
     public String MissionsGUITitle = "&7Missions";
+    public String MembersGUITitle = "&7Members";
     public boolean sendErrorReports = true;
     public int distance = 200;
     public int size = 50;

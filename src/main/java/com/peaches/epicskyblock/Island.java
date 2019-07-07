@@ -1,6 +1,7 @@
 package com.peaches.epicskyblock;
 
 import com.peaches.epicskyblock.gui.BoosterGUI;
+import com.peaches.epicskyblock.gui.MembersGUI;
 import com.peaches.epicskyblock.gui.MissionsGUI;
 import com.peaches.epicskyblock.gui.UpgradeGUI;
 import org.bukkit.Bukkit;
@@ -31,6 +32,7 @@ public class Island {
     private transient UpgradeGUI upgradeGUI;
     private transient BoosterGUI boosterGUI;
     private transient MissionsGUI missionsGUI;
+    private transient MembersGUI membersGUI;
 
     private int id;
 
@@ -54,11 +56,12 @@ public class Island {
         upgradeGUI = new UpgradeGUI(this);
         boosterGUI = new BoosterGUI(this);
         missionsGUI = new MissionsGUI(this);
+        membersGUI = new MembersGUI(this);
         spawnerBooster = 0;
         farmingBooster = 0;
         expBooster = 0;
         flightBooster = 0;
-        crystals = 10000;
+        crystals = 0;
         init();
     }
 
@@ -194,6 +197,11 @@ public class Island {
         return missionsGUI;
     }
 
+    public MembersGUI getMembersGUI() {
+        if (membersGUI == null) membersGUI = new MembersGUI(this);
+        return membersGUI;
+    }
+
     public int getSpawnerBooster() {
         return spawnerBooster;
     }
@@ -232,5 +240,9 @@ public class Island {
 
     public void setCrystals(int crystals) {
         this.crystals = crystals;
+    }
+
+    public List<String> getMembers() {
+        return members;
     }
 }
