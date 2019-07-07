@@ -45,6 +45,8 @@ public class Island {
 
     private int crystals;
 
+    private int sizeLevel;
+
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
@@ -62,6 +64,7 @@ public class Island {
         expBooster = 0;
         flightBooster = 0;
         crystals = 0;
+        sizeLevel = 1;
         init();
     }
 
@@ -117,7 +120,7 @@ public class Island {
 
     public void teleportHome(Player p) {
         p.teleport(getHome());
-        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size / 2, getCenter());
+        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel), getCenter());
     }
 
     public void delete() {
@@ -259,5 +262,16 @@ public class Island {
 
     public List<String> getMembers() {
         return members;
+    }
+
+    public int getSizeLevel() {
+        return sizeLevel;
+    }
+
+    public void setSizeLevel(int sizeLevel) {
+        this.sizeLevel = sizeLevel;
+
+        pos1 = getCenter().clone().subtract(EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2);
+        pos2 = getCenter().clone().add(EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2, 0, EpicSkyblock.getConfiguration().size.get(sizeLevel) / 2);
     }
 }

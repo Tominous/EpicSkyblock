@@ -1,7 +1,9 @@
 package com.peaches.epicskyblock.listeners;
 
 import com.peaches.epicskyblock.EpicSkyblock;
+import com.peaches.epicskyblock.NMSUtils;
 import com.peaches.epicskyblock.User;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -10,6 +12,7 @@ public class onInventoryClick implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e) {
+        Player p = (Player) e.getWhoClicked();
         User user = User.getUser(e.getWhoClicked().getName());
         if (user.getIsland() != null) {
             if (e.getInventory().equals(user.getIsland().getBoosterGUI().inventory)) {
@@ -69,6 +72,12 @@ public class onInventoryClick implements Listener {
             }
             if (e.getInventory().equals(user.getIsland().getUpgradeGUI().inventory)) {
                 e.setCancelled(true);
+                if (e.getCurrentItem().equals(user.getIsland().getUpgradeGUI().size)) {
+                    if (EpicSkyblock.getConfiguration().size.containsKey(user.getIsland().getSizeLevel() + 1)) {
+                        user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
+                        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()), user.getIsland().getCenter());
+                    }
+                }
             }
             if (e.getInventory().equals(user.getIsland().getMembersGUI().inventory)) {
                 e.setCancelled(true);
