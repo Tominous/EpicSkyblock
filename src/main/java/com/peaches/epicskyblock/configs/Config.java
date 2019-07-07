@@ -1,5 +1,6 @@
 package com.peaches.epicskyblock.configs;
 
+import org.bukkit.Material;
 import org.bukkit.block.Biome;
 
 import java.util.HashMap;
@@ -34,6 +35,15 @@ public class Config {
     public int farmingBoosterCost = 15;
     public int experienceBoosterCost = 15;
     public int flightBoosterCost = 15;
+    public HashMap<Material, Integer> blockvalue = new HashMap<Material, Integer>() {{
+        put(Material.DIAMOND_BLOCK, 10);
+        put(Material.EMERALD_BLOCK, 20);
+        put(Material.BEACON, 100);
+    }};
+    public HashMap<String, Integer> spawnervalue = new HashMap<String, Integer>() {{
+        put("PIG", 100);
+        put("IRON_GOLEM", 1000);
+    }};
 
     public class Upgrade {
         private int size;

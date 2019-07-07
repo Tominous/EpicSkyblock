@@ -2,6 +2,8 @@ package com.peaches.epicskyblock;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.CreatureSpawner;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -33,5 +35,9 @@ public class Utils {
 
     public static List<String> color(List<String> strings) {
         return strings.stream().map(Utils::color).collect(Collectors.toList());
+    }
+
+    public static boolean isBlockValuable(Block b) {
+        return EpicSkyblock.getConfiguration().blockvalue.containsKey(b.getType()) || b.getState() instanceof CreatureSpawner;
     }
 }

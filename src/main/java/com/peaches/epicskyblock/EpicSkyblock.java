@@ -27,6 +27,21 @@ public class EpicSkyblock extends JavaPlugin {
     private static IslandManager islandManager;
 
     private static CommandManager commandManager;
+    /*
+    TODO
+    Missions:
+    1 Collect XP
+    2 Break Blocks
+    3 Mine Ores
+    4 Harvest Crops
+    5 Kill Mobs
+    6 Fisherman
+    7 Place Blocks
+
+    ISTOP
+    Way to edit warps
+    Messages
+     */
 
     @Override
     public void onEnable() {

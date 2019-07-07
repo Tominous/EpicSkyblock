@@ -16,6 +16,7 @@ public class onBlockBreak implements Listener {
             Island island = u.getIsland();
             if (island != null) {
                 if (island.isInIsland(e.getBlock().getLocation())) {
+                    island.blocks.remove(e.getBlock().getLocation());
                     // Block is in players island
                 } else {
                     e.setCancelled(true);

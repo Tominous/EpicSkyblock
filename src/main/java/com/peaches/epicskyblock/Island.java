@@ -6,12 +6,16 @@ import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Biome;
+import org.bukkit.block.Block;
+import org.bukkit.block.BlockState;
+import org.bukkit.block.CreatureSpawner;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -72,6 +76,12 @@ public class Island {
     private int memberLevel;
     private int warpLevel;
 
+    private Integer a;
+
+    private int value;
+
+    public transient List<Location> blocks;
+
     private List<Warp> warps;
 
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
@@ -95,8 +105,51 @@ public class Island {
         sizeLevel = 1;
         memberLevel = 1;
         warpLevel = 1;
+        value = 0;
         warps = new ArrayList<>();
         init();
+    }
+
+    public void calculateIslandValue() {
+        int v = 0;
+        for (Location loc : blocks) {
+            Block b = loc.getBlock();
+            if (EpicSkyblock.getConfiguration().blockvalue.containsKey(b.getType())) {
+                v += EpicSkyblock.getConfiguration().blockvalue.get(b.getType());
+            }
+            if (loc.getBlock().getState() instanceof CreatureSpawner) {
+                CreatureSpawner spawner = (CreatureSpawner) b.getState();
+                if (EpicSkyblock.getConfiguration().spawnervalue.containsKey(spawner.getSpawnedType().name())) {
+                    v += EpicSkyblock.getConfiguration().spawnervalue.get(spawner.getSpawnedType().name());
+                }
+            }
+        }
+        this.value = v;
+    }
+
+    public void initBlocks() {
+        blocks.clear();
+        this.a = Bukkit.getScheduler().scheduleSyncRepeatingTask(EpicSkyblock.getInstance(), new Runnable() {
+
+            double Y = getPos1().getY();
+
+            @Override
+            public void run() {
+                if (Y <= EpicSkyblock.getIslandManager().getWorld().getMaxHeight()) {
+                    for (double X = getPos1().getX(); X <= getPos2().getX(); X++) {
+                        for (double Z = getPos1().getZ(); Z <= getPos2().getZ(); Z++) {
+                            Location loc = new Location(getPos1().getWorld(), X, Y, Z);
+                            if (Utils.isBlockValuable(loc.getBlock())) {
+                                if (!blocks.contains(loc)) blocks.add(loc);
+                            }
+                        }
+                    }
+                } else {
+                    Bukkit.getScheduler().cancelTask(a);
+                }
+                Y++;
+            }
+        }, 0, 1);
     }
 
     public void addWarp(Player player, Location location, String name, String password) {
@@ -125,7 +178,9 @@ public class Island {
     }
 
     public void init() {
+        blocks = new ArrayList<>();
         initChunks();
+        initBlocks();
         boosterid = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), () -> {
             if (spawnerBooster > 0) spawnerBooster--;
             if (farmingBooster > 0) farmingBooster--;
@@ -143,6 +198,7 @@ public class Island {
                 }
             }
         }, 0, 20);
+        Bukkit.getScheduler().scheduleSyncRepeatingTask(EpicSkyblock.getInstance(), this::calculateIslandValue, 0, 20);
     }
 
     public void initChunks() {
@@ -344,5 +400,9 @@ public class Island {
 
     public List<Warp> getWarps() {
         return warps;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
