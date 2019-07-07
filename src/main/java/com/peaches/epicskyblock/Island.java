@@ -68,6 +68,10 @@ public class Island {
         members.add(user.player);
     }
 
+    public boolean isInIsland(Location location) {
+        return (location.getX() > getPos1().getX() && location.getX() <= getPos2().getX()) && (location.getZ() > getPos1().getZ() && location.getZ() <= getPos2().getZ());
+    }
+
     public void init() {
         initChunks();
         boosterid = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), () -> {
@@ -109,6 +113,14 @@ public class Island {
             User.getUser(player).islandID = 0;
             if (Bukkit.getPlayer(player) != null) Bukkit.getPlayer(player).closeInventory();
         }
+        for (Chunk c : chunks) {
+            for (Entity e : c.getEntities()) {
+                if (e instanceof Player) {
+                    Player p = (Player) e;
+                    NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, Integer.MAX_VALUE, getCenter());
+                }
+            }
+        }
         this.owner = null;
         this.pos1 = null;
         this.pos2 = null;
@@ -138,9 +150,6 @@ public class Island {
             for (Entity e : c.getEntities()) {
                 if (e.getType() != EntityType.PLAYER) {
                     e.remove();
-                } else {
-                    Player p = (Player) e;
-                    NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, Integer.MAX_VALUE, getCenter());
                 }
             }
         }

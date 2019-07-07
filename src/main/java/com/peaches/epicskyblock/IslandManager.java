@@ -95,4 +95,15 @@ public class IslandManager {
         if (schematic == null) schematic = Schematic.loadSchematic(schematicFile);
         return schematic;
     }
+
+    public Island getIslandViaLocation(Location loc) {
+        if (loc.getWorld().equals(getWorld())) {
+            for (Island island : islands.values()) {
+                if (island.isInIsland(loc)) {
+                    return island;
+                }
+            }
+        }
+        return null;
+    }
 }
