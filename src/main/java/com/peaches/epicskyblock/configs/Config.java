@@ -12,5 +12,9 @@ public class Config {
     public int distance = 200;
     public int size = 50;
     public Biome defaultBiome = Biome.PLAINS;
+    public int spawnerBoosterCost = 15;
+    public int farmingBoosterCost = 15;
+    public int experienceBoosterCost = 15;
+    public int flightBoosterCost = 15;
 
 }

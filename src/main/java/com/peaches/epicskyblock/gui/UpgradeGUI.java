@@ -6,21 +6,34 @@ import com.peaches.epicskyblock.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.inventory.Inventory;
+import org.bukkit.inventory.ItemStack;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class UpgradeGUI {
 
     public Inventory inventory;
+    public ItemStack size;
+    public ItemStack member;
+    public ItemStack warp;
     public int islandID;
 
     public UpgradeGUI(Island island) {
-        this.inventory = Bukkit.createInventory(null, 27, EpicSkyblock.getConfiguration().UpgradeGUITitle);
+        this.inventory = Bukkit.createInventory(null, 27, Utils.color(EpicSkyblock.getConfiguration().UpgradeGUITitle));
         islandID = island.getId();
-        addContent();
+        Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
     }
 
     public void addContent() {
         for (int i = 0; i < 27; i++) {
             inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
         }
+        this.size = Utils.makeItem(Material.GRASS, 1, 0, "&b&lIsland Size", Utils.color(new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b", "&b&l * &7Current Size: &b", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:", "", "&b&l[!] &bRight Click to Purchase this Upgrade"))));
+        this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lIsland Member Count", Utils.color(new ArrayList<>(Arrays.asList("&7Need more members? Buy this", "&7upgrade to increase your member count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b", "&b&l * &7Current Size: &b", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:", "", "&b&l[!] &bRight Click to Purchase this Upgrade"))));
+        this.warp = Utils.makeItem(Material.ENDER_PORTAL_FRAME, 1, 0, "&b&lIsland Warp", Utils.color(new ArrayList<>(Arrays.asList("&7Need more island warps? Buy this", "&7upgrade to increase your warp count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b", "&b&l * &7Current Size: &b", "&b&l * &7Upgrade Cost: &b", "", "&b&lLevels:", "", "&b&l[!] &bRight Click to Purchase this Upgrade"))));
+        inventory.setItem(10, size);
+        inventory.setItem(13, member);
+        inventory.setItem(16, warp);
     }
 }

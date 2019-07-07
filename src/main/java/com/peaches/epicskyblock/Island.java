@@ -34,6 +34,15 @@ public class Island {
 
     private int id;
 
+    private int spawnerBooster;
+    private int farmingBooster;
+    private int expBooster;
+    private int flightBooster;
+
+    private int boosterid;
+
+    private int crystals;
+
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
@@ -45,13 +54,28 @@ public class Island {
         upgradeGUI = new UpgradeGUI(this);
         boosterGUI = new BoosterGUI(this);
         missionsGUI = new MissionsGUI(this);
-        initChunks();
+        spawnerBooster = 0;
+        farmingBooster = 0;
+        expBooster = 0;
+        flightBooster = 0;
+        crystals = 10000;
+        init();
     }
 
     public void addUser(User user) {
         user.islandID = id;
         user.invites.clear();
         members.add(user.player);
+    }
+
+    public void init() {
+        initChunks();
+        boosterid = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), () -> {
+            if (spawnerBooster > 0) spawnerBooster--;
+            if (farmingBooster > 0) farmingBooster--;
+            if (expBooster > 0) expBooster--;
+            if (flightBooster > 0) flightBooster--;
+        }, 0, 20);
     }
 
     public void initChunks() {
@@ -83,6 +107,7 @@ public class Island {
         killEntities();
         for (String player : members) {
             User.getUser(player).islandID = 0;
+            if (Bukkit.getPlayer(player) != null) Bukkit.getPlayer(player).closeInventory();
         }
         this.owner = null;
         this.pos1 = null;
@@ -94,6 +119,8 @@ public class Island {
         EpicSkyblock.getIslandManager().islands.remove(this.id);
         this.id = 0;
         EpicSkyblock.getInstance().saveConfigs();
+        Bukkit.getScheduler().cancelTask(boosterid);
+        boosterid = -1;
     }
 
     public void deleteBlocks() {
@@ -156,5 +183,45 @@ public class Island {
     public MissionsGUI getMissionsGUI() {
         if (missionsGUI == null) missionsGUI = new MissionsGUI(this);
         return missionsGUI;
+    }
+
+    public int getSpawnerBooster() {
+        return spawnerBooster;
+    }
+
+    public void setSpawnerBooster(int spawnerBooster) {
+        this.spawnerBooster = spawnerBooster;
+    }
+
+    public int getFarmingBooster() {
+        return farmingBooster;
+    }
+
+    public void setFarmingBooster(int farmingBooster) {
+        this.farmingBooster = farmingBooster;
+    }
+
+    public int getExpBooster() {
+        return expBooster;
+    }
+
+    public void setExpBooster(int expBooster) {
+        this.expBooster = expBooster;
+    }
+
+    public int getFlightBooster() {
+        return flightBooster;
+    }
+
+    public void setFlightBooster(int flightBooster) {
+        this.flightBooster = flightBooster;
+    }
+
+    public int getCrystals() {
+        return crystals;
+    }
+
+    public void setCrystals(int crystals) {
+        this.crystals = crystals;
     }
 }

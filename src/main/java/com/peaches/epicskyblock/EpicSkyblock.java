@@ -7,6 +7,7 @@ import com.peaches.epicskyblock.configs.OreGen;
 import com.peaches.epicskyblock.listeners.*;
 import com.peaches.epicskyblock.serializer.Persist;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -27,10 +28,6 @@ public class EpicSkyblock extends JavaPlugin {
 
     private static CommandManager commandManager;
 
-    public static Persist getPersist() {
-        return persist;
-    }
-
     @Override
     public void onEnable() {
         super.onEnable();
@@ -48,10 +45,10 @@ public class EpicSkyblock extends JavaPlugin {
         saveConfigs();
 
         for (Island island : islandManager.islands.values()) {
-            island.initChunks();
+            island.init();
         }
 
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick());
 
         new Metrics(this);
 
@@ -113,6 +110,10 @@ public class EpicSkyblock extends JavaPlugin {
 
         saveConfigs();
 
+        for (Player p : Bukkit.getOnlinePlayers()) {
+            p.closeInventory();
+        }
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Disabled!");
@@ -142,5 +143,9 @@ public class EpicSkyblock extends JavaPlugin {
 
     public static OreGen getOreGen() {
         return oreGen;
+    }
+
+    public static Persist getPersist() {
+        return persist;
     }
 }

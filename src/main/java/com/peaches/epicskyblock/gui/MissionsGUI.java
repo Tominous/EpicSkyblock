@@ -14,9 +14,9 @@ public class MissionsGUI {
     public int islandID;
 
     public MissionsGUI(Island island) {
-        this.inventory = Bukkit.createInventory(null, 27, EpicSkyblock.getConfiguration().MissionsGUITitle);
+        this.inventory = Bukkit.createInventory(null, 27, Utils.color(EpicSkyblock.getConfiguration().MissionsGUITitle));
         islandID = island.getId();
-        addContent();
+        Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
     }
 
     public void addContent() {

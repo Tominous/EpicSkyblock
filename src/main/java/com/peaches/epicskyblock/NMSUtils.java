@@ -24,12 +24,13 @@ public class NMSUtils {
 
             worldBorder.getClass().getMethod("setWarningTime", int.class).invoke(worldBorder, 0);
 
-            if (color == Color.Green) {
-                worldBorder.getClass().getMethod("transitionSizeBetween", double.class,
-                        double.class, long.class).invoke(worldBorder, size - 0.1D, size, 20000000L);
-            } else if (color == Color.Red) {
-                worldBorder.getClass().getMethod("transitionSizeBetween", double.class,
-                        double.class, long.class).invoke(worldBorder, size, size - 1.0D, 20000000L);
+            switch (color) {
+                case Red:
+                    worldBorder.getClass().getMethod("transitionSizeBetween", double.class, double.class, long.class).invoke(worldBorder, size, size - 1.0D, 20000000L);
+                    break;
+                case Green:
+                    worldBorder.getClass().getMethod("transitionSizeBetween", double.class, double.class, long.class).invoke(worldBorder, size - 0.1D, size, 20000000L);
+                    break;
             }
 
             Object packet = getNMSClass("PacketPlayOutWorldBorder").getConstructor(getNMSClass("WorldBorder"),
