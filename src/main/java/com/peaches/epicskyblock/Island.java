@@ -82,6 +82,17 @@ public class Island {
             if (farmingBooster > 0) farmingBooster--;
             if (expBooster > 0) expBooster--;
             if (flightBooster > 0) flightBooster--;
+            if (flightBooster == 0) {
+                for (String player : members) {
+                    Player p = Bukkit.getPlayer(player);
+                    if (p != null) {
+                        if (!p.hasPermission("EpicSkyblock.Fly")) {
+                            p.setAllowFlight(false);
+                            p.setFlying(false);
+                        }
+                    }
+                }
+            }
         }, 0, 20);
     }
 

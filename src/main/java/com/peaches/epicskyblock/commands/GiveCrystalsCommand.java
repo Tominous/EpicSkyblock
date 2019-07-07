@@ -23,18 +23,16 @@ public class GiveCrystalsCommand extends Command {
             return;
         }
 
-        Player p = (Player) sender;
-        User user = User.getUser(p.getName());
         if (Bukkit.getPlayer(args[1]) != null) {
             Player player = Bukkit.getPlayer(args[1]);
             Island island = User.getUser(args[1]).getIsland();
             try {
                 int amount = Integer.parseInt(args[2]);
                 island.setCrystals(island.getCrystals() + amount);
-                p.sendMessage("You gave " + args[1] + " " + args[2] + " Crystals");
-                player.sendMessage("You gave been given "+args[2]+" Crystals");
+                sender.sendMessage("You gave " + args[1] + " " + args[2] + " Crystals");
+                player.sendMessage("You gave been given " + args[2] + " Crystals");
             } catch (Exception e) {
-                p.sendMessage(args[2] + "is not a number");
+                sender.sendMessage(args[2] + "is not a number");
             }
         }
     }

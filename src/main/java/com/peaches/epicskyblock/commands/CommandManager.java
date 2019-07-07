@@ -33,6 +33,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         new CrystalsCommand();
         new GiveCrystalsCommand();
         new MembersCommand();
+        new FlyCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {
