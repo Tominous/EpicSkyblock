@@ -11,7 +11,7 @@ import java.util.List;
 public class BoosterCommand extends Command {
 
     public BoosterCommand() {
-        super(new ArrayList<>(Arrays.asList("booster")), "", false);
+        super(new ArrayList<>(Arrays.asList("booster")), "", true);
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.util.List;
 public class InviteCommand extends Command {
 
     public InviteCommand() {
-        super(new ArrayList<>(Arrays.asList("invite")), "", false);
+        super(new ArrayList<>(Arrays.asList("invite")), "", true);
     }
 
     @Override

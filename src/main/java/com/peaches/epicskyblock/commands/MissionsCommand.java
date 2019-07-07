@@ -11,7 +11,7 @@ import java.util.List;
 public class MissionsCommand extends Command {
 
     public MissionsCommand() {
-        super(new ArrayList<>(Arrays.asList("missions")), "", false);
+        super(new ArrayList<>(Arrays.asList("missions")), "", true);
     }
 
     @Override

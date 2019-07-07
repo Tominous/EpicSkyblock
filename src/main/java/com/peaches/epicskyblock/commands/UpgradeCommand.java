@@ -11,7 +11,7 @@ import java.util.List;
 public class UpgradeCommand extends Command {
 
     public UpgradeCommand() {
-        super(new ArrayList<>(Arrays.asList("upgrade")), "", false);
+        super(new ArrayList<>(Arrays.asList("upgrade")), "", true);
     }
 
     @Override

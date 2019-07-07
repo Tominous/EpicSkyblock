@@ -13,7 +13,7 @@ import java.util.List;
 public class JoinCommand extends Command {
 
     public JoinCommand() {
-        super(new ArrayList<>(Arrays.asList("join")), "", false);
+        super(new ArrayList<>(Arrays.asList("join")), "", true);
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.util.List;
 public class RegenCommand extends Command {
 
     public RegenCommand() {
-        super(new ArrayList<>(Arrays.asList("regen")), "", false);
+        super(new ArrayList<>(Arrays.asList("regen")), "", true);
     }
 
     @Override

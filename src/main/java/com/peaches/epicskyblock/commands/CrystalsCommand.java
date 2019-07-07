@@ -11,7 +11,7 @@ import java.util.List;
 public class CrystalsCommand extends Command {
 
     public CrystalsCommand() {
-        super(new ArrayList<>(Arrays.asList("crystals")), "", false);
+        super(new ArrayList<>(Arrays.asList("crystals")), "", true);
     }
 
     @Override
