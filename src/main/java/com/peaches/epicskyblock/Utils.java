@@ -1,6 +1,7 @@
 package com.peaches.epicskyblock;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.block.CreatureSpawner;
@@ -49,5 +50,30 @@ public class Utils {
         islands.sort(Comparator.comparingInt(Island::getValue));
         Collections.reverse(islands);
         return islands;
+    }
+
+
+    public static boolean isSafe(Location loc) {
+        return (loc.getBlock().getType().equals(Material.AIR)
+                && (!loc.clone().add(0, -1, 0).getBlock().getType().equals(Material.AIR) && !loc.clone().add(0, -1, 0).getBlock().isLiquid()));
+    }
+
+
+    public static Location getNewHome(Island island, Location loc) {
+        Block b;
+        b = EpicSkyblock.getIslandManager().getWorld().getHighestBlockAt(loc);
+        if (isSafe(b.getLocation())) {
+            return b.getLocation().add(0.5, 1, 0.5);
+        }
+
+        for (double X = island.getPos1().getX(); X <= island.getPos2().getX(); X++) {
+            for (double Z = island.getPos1().getZ(); Z <= island.getPos2().getZ(); Z++) {
+                b = EpicSkyblock.getIslandManager().getWorld().getHighestBlockAt((int) X, (int) Z);
+                if (isSafe(b.getLocation())) {
+                    return b.getLocation().add(0.5, 1, 0.5);
+                }
+            }
+        }
+        return null;
     }
 }

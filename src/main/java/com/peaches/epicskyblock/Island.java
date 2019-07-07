@@ -221,8 +221,22 @@ public class Island {
     }
 
     public void teleportHome(Player p) {
-        p.teleport(getHome());
-        NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+        if (Utils.isSafe(getHome())) {
+            p.teleport(getHome());
+            NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+        } else {
+
+            Location loc = Utils.getNewHome(this, this.home);
+            if (loc != null) {
+                this.home = loc;
+                p.teleport(this.home);
+                NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+            } else {
+                generateIsland();
+                teleportHome(p);
+                NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+            }
+        }
     }
 
     public void delete() {
