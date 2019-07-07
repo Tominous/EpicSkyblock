@@ -20,7 +20,11 @@ public class DeleteCommand extends Command {
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
-            user.getIsland().delete();
+            if(user.getIsland().getOwner().equals(p)){
+                user.getIsland().delete();
+            }else{
+                sender.sendMessage("You must be the island owner to do this");
+            }
         } else {
             sender.sendMessage("You dont have an island");
         }
