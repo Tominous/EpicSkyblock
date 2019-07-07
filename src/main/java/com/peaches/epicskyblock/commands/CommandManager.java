@@ -7,7 +7,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -60,7 +59,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
                 }
             } else {
                 // Command doesnt exist
-                cs.sendMessage("Command doesnt exist");
+                cs.sendMessage("Command doesn't exist");
             }
         }
         return false;
@@ -68,7 +67,15 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
     @Override
     public List<String> onTabComplete(CommandSender cs, Command cmd, String s, String[] args) {
-        if (args.length == 1) return new ArrayList<>(commands.keySet());
+        if (args.length == 1) {
+            ArrayList<String> result = new ArrayList<>();
+            for (String command : commands.keySet()) {
+                if (command.toLowerCase().startsWith(args[0].toLowerCase())) {
+                    result.add(command);
+                }
+            }
+            return result;
+        }
         if (commands.containsKey(args[0])) {
             return commands.get(args[0]).TabComplete(cs, cmd, s, args);
         }
