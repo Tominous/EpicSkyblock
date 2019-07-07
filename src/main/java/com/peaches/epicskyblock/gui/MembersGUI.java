@@ -30,9 +30,8 @@ public class MembersGUI {
         }
         int i = 0;
         for (String member : EpicSkyblock.getIslandManager().islands.get(islandID).getMembers()) {
-            ItemStack head = new ItemStack(Material.SKULL_ITEM);
+            ItemStack head = Utils.makeItem(Material.SKULL_ITEM, 1, 3, "&b&l" + member);
             SkullMeta m = (SkullMeta) head.getItemMeta();
-            m.setDisplayName(Utils.color("&b&l") + member);
             m.setOwner(member);
             head.setItemMeta(m);
             inventory.setItem(i, head);
