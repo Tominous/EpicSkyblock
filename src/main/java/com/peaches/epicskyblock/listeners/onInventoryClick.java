@@ -4,6 +4,7 @@ import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.Island;
 import com.peaches.epicskyblock.NMSUtils;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.gui.TopGUI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -112,6 +113,9 @@ public class onInventoryClick implements Listener {
                 }
             }
             if (e.getInventory().equals(user.getIsland().getMembersGUI().inventory)) {
+                e.setCancelled(true);
+            }
+            if (e.getInventory().equals(TopGUI.inventory)) {
                 e.setCancelled(true);
             }
             if (e.getInventory().equals(user.getIsland().getWarpGUI().inventory)) {

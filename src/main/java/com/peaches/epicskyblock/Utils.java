@@ -7,6 +7,9 @@ import org.bukkit.block.CreatureSpawner;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -39,5 +42,11 @@ public class Utils {
 
     public static boolean isBlockValuable(Block b) {
         return EpicSkyblock.getConfiguration().blockvalue.containsKey(b.getType()) || b.getState() instanceof CreatureSpawner;
+    }
+
+    public static List<Island> getTopIslands() {
+        List<Island> islands = new ArrayList<>(EpicSkyblock.getIslandManager().islands.values());
+        Collections.sort(islands, Comparator.comparingInt(Island::getValue));
+        return islands;
     }
 }

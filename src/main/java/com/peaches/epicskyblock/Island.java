@@ -294,8 +294,8 @@ public class Island {
         return home;
     }
 
-    public Player getOwner() {
-        return Bukkit.getPlayer(owner);
+    public String getOwner() {
+        return owner;
     }
 
     public int getId() {
