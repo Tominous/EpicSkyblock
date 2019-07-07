@@ -4,7 +4,7 @@ import org.bukkit.block.Biome;
 
 public class Config {
 
-    public String prefix = "&e&lEpicSkyblock";
+    public String prefix = "&b&lEpicSkyblock";
     public String UpgradeGUITitle = "&7Upgrade";
     public String BoosterGUITitle = "&7Booster";
     public String MissionsGUITitle = "&7Missions";

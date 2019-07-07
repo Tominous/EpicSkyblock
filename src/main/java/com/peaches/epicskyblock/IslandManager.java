@@ -47,7 +47,7 @@ public class IslandManager {
         island.generateIsland();
         island.teleportHome(player);
 
-        NMSUtils.sendTitle(player, "&e&lIsland Created", 20, 40, 20);
+        NMSUtils.sendTitle(player, "&b&lIsland Created", 20, 40, 20);
 
         //TODO fix this cuz it doesnt work for some reason
 
