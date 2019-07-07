@@ -18,11 +18,12 @@ public class UpgradeGUI {
     public ItemStack member;
     public ItemStack warp;
     public int islandID;
+    public int scheduler;
 
     public UpgradeGUI(Island island) {
         this.inventory = Bukkit.createInventory(null, 27, Utils.color(EpicSkyblock.getConfiguration().UpgradeGUITitle));
         islandID = island.getId();
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
+        scheduler = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
     }
 
     public void addContent() {

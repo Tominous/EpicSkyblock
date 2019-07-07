@@ -21,10 +21,12 @@ public class BoosterGUI {
     public ItemStack exp;
     public ItemStack flight;
 
+    public int scheduler;
+
     public BoosterGUI(Island island) {
         this.inventory = Bukkit.createInventory(null, 27, Utils.color(EpicSkyblock.getConfiguration().BoosterGUITitle));
         islandID = island.getId();
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
+        scheduler = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
     }
 
     public void addContent() {

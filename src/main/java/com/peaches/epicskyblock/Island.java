@@ -110,6 +110,10 @@ public class Island {
     }
 
     public void delete() {
+        Bukkit.getScheduler().cancelTask(getMembersGUI().scheduler);
+        Bukkit.getScheduler().cancelTask(getBoosterGUI().scheduler);
+        Bukkit.getScheduler().cancelTask(getMissionsGUI().scheduler);
+        Bukkit.getScheduler().cancelTask(getUpgradeGUI().scheduler);
         deleteBlocks();
         killEntities();
         for (String player : members) {

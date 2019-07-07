@@ -16,11 +16,12 @@ public class MembersGUI {
 
     public Inventory inventory;
     public int islandID;
+    public int scheduler;
 
     public MembersGUI(Island island) {
         this.inventory = Bukkit.createInventory(null, 27, Utils.color(EpicSkyblock.getConfiguration().MembersGUITitle));
         islandID = island.getId();
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
+        scheduler = Bukkit.getScheduler().scheduleAsyncRepeatingTask(EpicSkyblock.getInstance(), this::addContent, 0, 10);
     }
 
     public void addContent() {
