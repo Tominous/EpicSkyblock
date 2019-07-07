@@ -38,7 +38,6 @@ public class EpicSkyblock extends JavaPlugin {
     6 Fisherman
     7 Place Blocks
 
-    ISTOP
     Way to edit warps
     Messages
      */

@@ -131,7 +131,7 @@ public class Island {
         blocks.clear();
         this.a = Bukkit.getScheduler().scheduleSyncRepeatingTask(EpicSkyblock.getInstance(), new Runnable() {
 
-            double Y = getPos1().getY();
+            double Y = 0;
 
             @Override
             public void run() {
