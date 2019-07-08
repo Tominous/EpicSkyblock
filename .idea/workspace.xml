@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="50" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="52" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java" line="49" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b0b0bba-4aa9-4e00-9d8c-ec762622518d" name="Default Changelist" comment="">
+    <list default="true" id="6b0b0bba-4aa9-4e00-9d8c-ec762622518d" name="Default Changelist" comment="Disab">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -25,8 +26,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="21" />
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,16 +48,16 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/WarpGUI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="32" column="89" lean-forward="true" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+              <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="422" column="34" selection-start-line="422" selection-start-column="34" selection-end-line="422" selection-end-column="34" />
+            <state relative-caret-position="3420">
+              <caret line="252" column="53" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -93,10 +106,10 @@
       <find>teleport</find>
       <find>teleportHome</find>
       <find>repo</find>
-      <find>delete</find>
       <find>delete(</find>
       <find>this.a</find>
       <find>addus</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -146,13 +159,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerDamageByPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" />
       </list>
     </option>
   </component>
@@ -238,25 +251,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EpicSkyblock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EpicSkyblock" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
-              <item name="placeholders" type="462c0819:PsiDirectoryNode" />
+              <item name="listeners" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
@@ -516,14 +511,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562569151859</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fixed a typo which was causing a npe to occur">
+      <created>1562569510260</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1562569510260</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28177083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28177083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -532,7 +534,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.21451104" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" weight="0.21451104" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -551,7 +553,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Members inventory" />
     <MESSAGE value="removed the scheduler on island delete" />
     <MESSAGE value="Finished Fly booster" />
     <MESSAGE value="Added Farming Booster" />
@@ -576,7 +577,8 @@
     <MESSAGE value="Added a listener to prevent island members from attacking each other" />
     <MESSAGE value="Made /is regen an owner only command" />
     <MESSAGE value="Added /is leave command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added /is leave command" />
+    <MESSAGE value="Fixed a typo which was causing a npe to occur" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a typo which was causing a npe to occur" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Direction.java">
@@ -901,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="72" selection-start-line="20" selection-start-column="72" selection-end-line="20" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -931,8 +923,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="44" selection-start-line="44" selection-end-line="45" selection-end-column="21" />
+        <state relative-caret-position="375">
+          <caret line="48" column="23" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/WarpGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="89" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3420">
+          <caret line="252" column="53" selection-start-line="252" selection-start-column="53" selection-end-line="252" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -953,17 +959,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/WarpGUI.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="89" lean-forward="true" selection-start-line="32" selection-start-column="89" selection-end-line="32" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="422" column="34" selection-start-line="422" selection-start-column="34" selection-end-line="422" selection-end-column="34" />
+        <state relative-caret-position="315">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

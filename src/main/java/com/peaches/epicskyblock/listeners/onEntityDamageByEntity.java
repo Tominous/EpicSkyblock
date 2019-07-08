@@ -1,5 +1,6 @@
 package com.peaches.epicskyblock.listeners;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -16,7 +17,9 @@ public class onEntityDamageByEntity implements Listener {
                 Player player = (Player) e.getEntity();
                 User damager = User.getUser(p.getName());
                 User entity = User.getUser(player.getName());
-                if (damager.getIsland().equals(entity.getIsland()) && damager.getIsland() != null) {
+                if (e.getEntity().getLocation().getWorld().equals(EpicSkyblock.getIslandManager().getWorld())) {
+                    e.setCancelled(true);
+                } else if (damager.getIsland().equals(entity.getIsland()) && damager.getIsland() != null) {
                     e.setCancelled(true);
                     p.sendMessage("You cannot attack your island members");
                 }

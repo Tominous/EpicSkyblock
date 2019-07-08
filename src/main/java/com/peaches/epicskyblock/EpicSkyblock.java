@@ -45,6 +45,8 @@ public class EpicSkyblock extends JavaPlugin {
 
     Way to edit warps
     Messages
+    Permissions/Ranks: Owner Moderator Trusted Member
+    Add 1.13 Schematics
      */
 
     @Override
