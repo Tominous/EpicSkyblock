@@ -13,7 +13,7 @@ import java.util.List;
 public class LeaveCommand extends Command {
 
     public LeaveCommand() {
-        super(new ArrayList<>(Arrays.asList("leave")), "", true);
+        super(new ArrayList<>(Arrays.asList("leave")), "Leave an island","", true);
     }
 
     @Override

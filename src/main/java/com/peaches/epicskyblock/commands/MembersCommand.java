@@ -13,7 +13,7 @@ import java.util.List;
 public class MembersCommand extends Command {
 
     public MembersCommand() {
-        super(new ArrayList<>(Arrays.asList("members", "users", "list")), "", true);
+        super(new ArrayList<>(Arrays.asList("members", "users", "list")), "View your island members","", true);
     }
 
     @Override

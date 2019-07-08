@@ -14,7 +14,7 @@ import java.util.List;
 public class TopCommand extends Command {
 
     public TopCommand() {
-        super(new ArrayList<>(Arrays.asList("top")), "", true);
+        super(new ArrayList<>(Arrays.asList("top")), "View the top islands", "", true);
     }
 
     @Override

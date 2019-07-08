@@ -14,7 +14,7 @@ import java.util.List;
 public class InviteCommand extends Command {
 
     public InviteCommand() {
-        super(new ArrayList<>(Arrays.asList("invite")), "", true);
+        super(new ArrayList<>(Arrays.asList("invite")),"Invite a player to your island", "", true);
     }
 
     @Override

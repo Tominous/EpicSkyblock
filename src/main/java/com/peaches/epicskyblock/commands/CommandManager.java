@@ -14,6 +14,7 @@ import java.util.List;
 
 public class CommandManager implements CommandExecutor, TabCompleter {
     private HashMap<String, com.peaches.epicskyblock.commands.Command> commands = new HashMap<>();
+    private List<com.peaches.epicskyblock.commands.Command> commandList = new ArrayList<>();
 
     public CommandManager(String command) {
         EpicSkyblock.getInstance().getCommand(command).setExecutor(this);
@@ -48,6 +49,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         for (String alias : command.getAliases()) {
             commands.put(alias.toLowerCase(), command);
         }
+        commandList.add(command);
     }
 
     @Override
@@ -72,6 +74,10 @@ public class CommandManager implements CommandExecutor, TabCompleter {
             }
         }
         //Help Menu
+        cs.sendMessage(Utils.color("&b&lEpicSkyblock: &bHelp"));
+        for (com.peaches.epicskyblock.commands.Command c : commandList) {
+            cs.sendMessage(Utils.color("&b&l * &7" + c.getAliases().get(0) + ": &b" + c.getDescription()));
+        }
         return true;
     }
 

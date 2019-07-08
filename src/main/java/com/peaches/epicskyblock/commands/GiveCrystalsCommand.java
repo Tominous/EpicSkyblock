@@ -15,7 +15,7 @@ import java.util.List;
 public class GiveCrystalsCommand extends Command {
 
     public GiveCrystalsCommand() {
-        super(new ArrayList<>(Arrays.asList("givecrystals")), "EpicSkyblock.givecrystals", false);
+        super(new ArrayList<>(Arrays.asList("givecrystals")),"Give a player Crystals", "EpicSkyblock.givecrystals", false);
     }
 
     @Override

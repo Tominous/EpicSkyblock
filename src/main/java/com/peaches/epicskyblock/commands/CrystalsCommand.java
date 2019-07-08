@@ -13,7 +13,7 @@ import java.util.List;
 public class CrystalsCommand extends Command {
 
     public CrystalsCommand() {
-        super(new ArrayList<>(Arrays.asList("crystals")), "", true);
+        super(new ArrayList<>(Arrays.asList("crystals")),"Shows you how many crystals you have", "", true);
     }
 
     @Override

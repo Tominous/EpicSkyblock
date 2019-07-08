@@ -13,7 +13,7 @@ import java.util.List;
 public class FlyCommand extends Command {
 
     public FlyCommand() {
-        super(new ArrayList<>(Arrays.asList("fly", "flight")), "", true);
+        super(new ArrayList<>(Arrays.asList("fly", "flight")),"Toggle your ability to fly", "", true);
     }
 
     @Override

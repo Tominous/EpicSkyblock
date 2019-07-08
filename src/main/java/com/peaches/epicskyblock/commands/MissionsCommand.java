@@ -13,7 +13,7 @@ import java.util.List;
 public class MissionsCommand extends Command {
 
     public MissionsCommand() {
-        super(new ArrayList<>(Arrays.asList("missions")), "", true);
+        super(new ArrayList<>(Arrays.asList("missions")),"Opens the missions GUI", "", true);
     }
 
     @Override

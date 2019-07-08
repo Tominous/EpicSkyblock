@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="44" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="46" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java" line="49" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b0bba-4aa9-4e00-9d8c-ec762622518d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/AboutCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/AboutCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/JoinCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/JoinCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,31 +46,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1164">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+            <state relative-caret-position="105">
+              <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+            <state relative-caret-position="606">
+              <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,68 +121,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="135" column="61" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
+            <state relative-caret-position="225">
+              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
               <folding>
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1027#1028#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1112#1113#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/IslandManager.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1050">
-              <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="25" selection-end-column="141" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="40" column="83" selection-start-line="40" selection-start-column="83" selection-end-line="40" selection-end-column="83" />
+            <state relative-caret-position="90">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,8 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/clipPlaceholderManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerDamageByPlayer.java" />
@@ -200,36 +217,38 @@
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDeath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockBreak.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockPlace.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/JoinCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerTalk.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Messages.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/AboutCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/JoinCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" />
       </list>
     </option>
   </component>
@@ -304,6 +323,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EpicSkyblock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
@@ -648,11 +676,19 @@
       <option name="project" value="LOCAL" />
       <updated>1562605277670</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Fixed a npe as i didnt check if players islands were null">
+      <created>1562609502945</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1562609502949</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1054" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19947916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -709,7 +745,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finished GUI for Warp Upgrade" />
     <MESSAGE value="Added about command + Fixed the player boolean for other commands" />
     <MESSAGE value="Added Island Warps" />
     <MESSAGE value="Removed damage when player is in their island" />
@@ -734,71 +769,10 @@
     <MESSAGE value="Fixed sending the amount instead of reward to completing island mission giving the island way more crystals" />
     <MESSAGE value="Fixed competitor constantly giving rewards" />
     <MESSAGE value="Finished Adding customisable messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Adding customisable messages" />
+    <MESSAGE value="Fixed a npe as i didnt check if players islands were null" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed a npe as i didnt check if players islands were null" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerTalk.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="114" selection-start-line="18" selection-start-column="114" selection-end-line="19" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-SNAPSHOT.jar!/org/bukkit/entity/EntityType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1035">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-SNAPSHOT.jar!/org/bukkit/block/BlockState.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-SNAPSHOT.jar!/org/bukkit/inventory/meta/SkullMeta.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/me/clip/placeholderapi/2.8.4/placeholderapi-2.8.4.jar!/me/clip/placeholderapi/expansion/PlaceholderExpansion.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-474">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/me/clip/placeholderapi/2.8.4/placeholderapi-2.8.4.jar!/me/clip/placeholderapi/expansion/Relational.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BoosterGUI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -848,13 +822,6 @@
             <element signature="e#362#363#0" expanded="true" />
             <element signature="e#399#400#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MissionsGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="40" column="504" selection-start-line="40" selection-start-column="504" selection-end-line="40" selection-end-column="504" />
         </state>
       </provider>
     </entry>
@@ -937,100 +904,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="22" column="39" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="29" column="141" selection-start-line="29" selection-start-column="141" selection-end-line="29" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="30" column="85" lean-forward="true" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="29" column="141" selection-start-line="29" selection-start-column="141" selection-end-line="29" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="76" lean-forward="true" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="83" selection-start-line="23" selection-start-column="83" selection-end-line="23" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1045,48 +918,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="69" column="24" selection-start-line="69" selection-start-column="24" selection-end-line="69" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4035">
-          <caret line="296" column="65" selection-start-line="296" selection-start-column="65" selection-end-line="296" selection-end-column="65" />
+        <state relative-caret-position="1575">
+          <caret line="130" column="20" selection-start-line="123" selection-start-column="34" selection-end-line="130" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/IslandManager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="25" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="40" column="83" selection-start-line="40" selection-start-column="83" selection-end-line="40" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="135" column="61" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
+        <state relative-caret-position="300">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
           <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1105,27 +966,204 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Schematic.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1164">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="1710">
+          <caret line="135" column="61" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamageByEntity.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/IslandManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        <state relative-caret-position="1050">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MissionsGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="41" column="337" selection-start-line="41" selection-start-column="337" selection-end-line="41" selection-end-column="346" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/AboutCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="87" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="91" selection-start-line="15" selection-start-column="91" selection-end-line="15" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="84" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/HomeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="88" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/JoinCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MissionsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="82" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="78" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ReloadCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="83" selection-start-line="15" selection-start-column="83" selection-end-line="15" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/SetWarpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="89" selection-start-line="15" selection-start-column="89" selection-end-line="15" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="74" selection-start-line="16" selection-start-column="74" selection-end-line="16" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/MembersCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="99" selection-start-line="15" selection-start-column="99" selection-end-line="15" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/UpgradeCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="69" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WarpsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="116" selection-start-line="15" selection-start-column="116" selection-end-line="15" selection-end-column="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <folding>
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="78" column="73" selection-start-line="78" selection-start-column="73" selection-end-line="78" selection-end-column="73" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

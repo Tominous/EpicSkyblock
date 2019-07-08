@@ -15,7 +15,7 @@ import java.util.List;
 public class JoinCommand extends Command {
 
     public JoinCommand() {
-        super(new ArrayList<>(Arrays.asList("join")), "", true);
+        super(new ArrayList<>(Arrays.asList("join")),"Join another players island", "", true);
     }
 
     @Override

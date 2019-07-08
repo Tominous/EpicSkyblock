@@ -13,7 +13,7 @@ import java.util.List;
 public class WarpsCommand extends Command {
 
     public WarpsCommand() {
-        super(new ArrayList<>(Arrays.asList("warps")), "", true);
+        super(new ArrayList<>(Arrays.asList("warps")), "opens the Warp GUI","", true);
     }
 
     @Override

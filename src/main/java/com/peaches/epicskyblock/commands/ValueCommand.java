@@ -13,7 +13,7 @@ import java.util.List;
 public class ValueCommand extends Command {
 
     public ValueCommand() {
-        super(new ArrayList<>(Arrays.asList("value")), "", true);
+        super(new ArrayList<>(Arrays.asList("value")), "Shows your island value","", true);
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.List;
 public class RegenCommand extends Command {
 
     public RegenCommand() {
-        super(new ArrayList<>(Arrays.asList("regen")), "", true);
+        super(new ArrayList<>(Arrays.asList("regen")), "Regenerate your island","", true);
     }
 
     @Override

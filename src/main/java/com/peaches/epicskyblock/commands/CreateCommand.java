@@ -13,7 +13,7 @@ import java.util.List;
 public class CreateCommand extends Command {
 
     public CreateCommand() {
-        super(new ArrayList<>(Arrays.asList("create")), "", true);
+        super(new ArrayList<>(Arrays.asList("create")),"Creates a new island", "", true);
     }
 
     @Override

@@ -13,7 +13,7 @@ import java.util.List;
 public class WorldBorderCommand extends Command {
 
     public WorldBorderCommand() {
-        super(new ArrayList<>(Arrays.asList("border", "worldborder", "color", "colour")), "", true);
+        super(new ArrayList<>(Arrays.asList("border", "worldborder", "color", "colour")), "Opens the WorldBorder GUI","", true);
     }
 
     @Override

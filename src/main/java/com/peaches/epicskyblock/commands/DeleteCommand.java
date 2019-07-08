@@ -13,7 +13,7 @@ import java.util.List;
 public class DeleteCommand extends Command {
 
     public DeleteCommand() {
-        super(new ArrayList<>(Arrays.asList("delete")), "", true);
+        super(new ArrayList<>(Arrays.asList("delete")),"Delete you island",  "", true);
     }
 
     @Override

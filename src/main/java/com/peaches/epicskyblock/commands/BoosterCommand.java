@@ -13,7 +13,7 @@ import java.util.List;
 public class BoosterCommand extends Command {
 
     public BoosterCommand() {
-        super(new ArrayList<>(Arrays.asList("booster")), "", true);
+        super(new ArrayList<>(Arrays.asList("booster")),"Opens the booster GUI", "", true);
     }
 
     @Override

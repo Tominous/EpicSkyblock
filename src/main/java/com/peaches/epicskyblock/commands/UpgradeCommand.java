@@ -13,7 +13,7 @@ import java.util.List;
 public class UpgradeCommand extends Command {
 
     public UpgradeCommand() {
-        super(new ArrayList<>(Arrays.asList("upgrade")), "", true);
+        super(new ArrayList<>(Arrays.asList("upgrade")), "Opens the Upgrade GUI", "", true);
     }
 
     @Override

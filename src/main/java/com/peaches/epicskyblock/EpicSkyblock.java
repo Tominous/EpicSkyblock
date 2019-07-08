@@ -17,6 +17,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 import java.util.logging.Level;
 
 public class EpicSkyblock extends JavaPlugin {
@@ -65,11 +67,29 @@ public class EpicSkyblock extends JavaPlugin {
 
         setupPlaceholderAPI();
 
+        startCounting();
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Enabled!");
         getLogger().info("");
         getLogger().info("-------------------------------");
+    }
+
+    public void startCounting(){
+        Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> {
+            if(LocalDateTime.now().getDayOfWeek().equals(DayOfWeek.MONDAY) && LocalDateTime.now().getHour() == 0 && LocalDateTime.now().getMinute() == 0 && LocalDateTime.now().getSecond() == 0){
+                for(Island island : getIslandManager().islands.values()){
+                    island.treasureHunter = 0;
+                    island.competitor = 0;
+                    island.miner = 0;
+                    island.farmer = 0;
+                    island.hunter = 0;
+                    island.fisherman = 0;
+                    island.builder = 0;
+                }
+            }
+        }, 20, 20);
     }
 
     public void sendErrorMessage(Exception e) {
