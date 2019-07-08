@@ -1,6 +1,8 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import com.peaches.epicskyblock.gui.TopGUI;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -22,7 +24,7 @@ public class TopCommand extends Command {
         if (user.getIsland() != null) {
             p.openInventory(TopGUI.inventory);
         } else {
-            p.sendMessage("You dont have an island");
+            p.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
 
     }

@@ -1,6 +1,8 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -23,7 +25,7 @@ public class SetWarpCommand extends Command {
                 String password = args.length == 3 ? args[2] : "";
                 user.getIsland().addWarp(p, p.getLocation(), args[1], password);
             } else {
-                sender.sendMessage("You dont have an island");
+                p.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         } else {
             p.sendMessage("/is setwarp <Name> (Password)");

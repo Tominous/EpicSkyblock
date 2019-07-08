@@ -1,7 +1,9 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.Island;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -32,16 +34,16 @@ public class JoinCommand extends Command {
                     if (user.invites.contains(island.getId())) {
                         island.addUser(user);
                     } else {
-                        sender.sendMessage("You dont have any active invites for this island");
+                        sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noActiveInvites.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 } else {
-                    sender.sendMessage("Player already has an island");
+                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerAlreadyHaveIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 }
             } else {
-                sender.sendMessage("You dont have an island");
+                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         } else {
-            sender.sendMessage("That player is not currently online");
+            sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerOffline.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 

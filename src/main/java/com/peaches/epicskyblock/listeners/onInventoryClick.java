@@ -1,9 +1,6 @@
 package com.peaches.epicskyblock.listeners;
 
-import com.peaches.epicskyblock.EpicSkyblock;
-import com.peaches.epicskyblock.Island;
-import com.peaches.epicskyblock.NMSUtils;
-import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.*;
 import com.peaches.epicskyblock.gui.TopGUI;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -26,10 +23,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().spawnerBoosterCost);
                             user.getIsland().setSpawnerBooster(3600);
                         } else {
-                            e.getWhoClicked().sendMessage("Spawner booster already active");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().spawnerBoosterActive.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        e.getWhoClicked().sendMessage("You dont have enough island crystals");
+                        e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
                 if (e.getCurrentItem().equals(user.getIsland().getBoosterGUI().farming)) {
@@ -38,10 +35,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().farmingBoosterCost);
                             user.getIsland().setFarmingBooster(3600);
                         } else {
-                            e.getWhoClicked().sendMessage("Farming booster already active");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().farmingBoosterActive.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        e.getWhoClicked().sendMessage("You dont have enough island crystals");
+                        e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
                 if (e.getCurrentItem().equals(user.getIsland().getBoosterGUI().exp)) {
@@ -50,10 +47,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().experienceBoosterCost);
                             user.getIsland().setExpBooster(3600);
                         } else {
-                            e.getWhoClicked().sendMessage("Exp booster already active");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().expBoosterActive.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        e.getWhoClicked().sendMessage("You dont have enough island crystals");
+                        e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
                 if (e.getCurrentItem().equals(user.getIsland().getBoosterGUI().flight)) {
@@ -62,10 +59,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().flightBoosterCost);
                             user.getIsland().setFlightBooster(3600);
                         } else {
-                            e.getWhoClicked().sendMessage("Flight booster already active");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().flightBoosterActive.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        e.getWhoClicked().sendMessage("You dont have enough island crystals");
+                        e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
             }
@@ -81,10 +78,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
                             user.getIsland().sendBorder();
                         } else {
-                            p.sendMessage("You dont have enough Crystals");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        p.sendMessage("Maximum Level reached");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().maxLevelReached.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
                 if (e.getCurrentItem().equals(user.getIsland().getUpgradeGUI().member)) {
@@ -93,10 +90,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().member.get(user.getIsland().getMemberLevel() + 1).getCost());
                             user.getIsland().setMemberLevel(user.getIsland().getMemberLevel() + 1);
                         } else {
-                            p.sendMessage("You dont have enough Crystals");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        p.sendMessage("Maximum Level reached");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().maxLevelReached.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
                 if (e.getCurrentItem().equals(user.getIsland().getUpgradeGUI().warp)) {
@@ -105,10 +102,10 @@ public class onInventoryClick implements Listener {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().warp.get(user.getIsland().getWarpLevel() + 1).getCost());
                             user.getIsland().setWarpLevel(user.getIsland().getWarpLevel() + 1);
                         } else {
-                            p.sendMessage("You dont have enough Crystals");
+                            e.getWhoClicked().sendMessage(Utils.color(EpicSkyblock.getMessages().notEnoughCrystals.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         }
                     } else {
-                        p.sendMessage("Maximum Level reached");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().maxLevelReached.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     }
                 }
             }
@@ -134,9 +131,9 @@ public class onInventoryClick implements Listener {
                     Island.Warp warp = user.getIsland().getWarpGUI().warps.get(e.getSlot());
                     if (warp.getPassword().isEmpty()) {
                         p.teleport(warp.getLocation());
-                        p.sendMessage("Teleporting...");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().teleporting.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                     } else {
-                        p.sendMessage("Enter the password");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().enterPassword.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                         user.warp = warp;
                     }
                     p.closeInventory();

@@ -2,6 +2,7 @@ package com.peaches.epicskyblock.commands;
 
 import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -18,7 +19,7 @@ public class ReloadCommand extends Command {
     @Override
     public void execute(CommandSender sender, String[] args) {
         EpicSkyblock.getInstance().loadConfigs();
-        sender.sendMessage("Configs reloaded");
+        sender.sendMessage(Utils.color(EpicSkyblock.getMessages().reloaded.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
     }
 
     @Override

@@ -230,9 +230,9 @@ public class Island {
     public void addWarp(Player player, Location location, String name, String password) {
         if (warps.size() < EpicSkyblock.getConfiguration().warp.get(warpLevel).getSize()) {
             warps.add(new Warp(location, name, password));
-            player.sendMessage("Warp added");
+            player.sendMessage(Utils.color(EpicSkyblock.getMessages().warpAdded.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         } else {
-            player.sendMessage("Max warps reached");
+            player.sendMessage(Utils.color(EpicSkyblock.getMessages().maxWarpsReached.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 
@@ -244,7 +244,7 @@ public class Island {
             teleportHome(Bukkit.getPlayer(user.player));
             user.invites.clear();
         } else {
-            Bukkit.getPlayer(user.player).sendMessage("Max Member Count reached");
+            Bukkit.getPlayer(user.player).sendMessage(Utils.color(EpicSkyblock.getMessages().maxMemberCount.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 

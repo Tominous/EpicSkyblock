@@ -1,6 +1,7 @@
 package com.peaches.epicskyblock.commands;
 
 import com.peaches.epicskyblock.EpicSkyblock;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -51,29 +52,27 @@ public class CommandManager implements CommandExecutor, TabCompleter {
 
     @Override
     public boolean onCommand(CommandSender cs, Command cmd, String s, String[] args) {
-        if (args.length == 0) {
-            // No Arguments
-            cs.sendMessage("No arguments");
-        } else {
+        if (args.length != 0) {
             if (commands.containsKey(args[0])) {
                 com.peaches.epicskyblock.commands.Command command = commands.get(args[0]);
                 if (!command.isPlayer() || cs instanceof Player) {
                     if (cs.hasPermission(command.getPermission()) || command.getPermission().isEmpty()) {
                         command.execute(cs, args);
+                        return true;
                     } else {
                         // No permission
-                        cs.sendMessage("No permission");
+                        cs.sendMessage(Utils.color(EpicSkyblock.getMessages().noPermission.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                        return true;
                     }
                 } else {
                     // Must be a player
-                    cs.sendMessage("Must be a player");
+                    cs.sendMessage(Utils.color(EpicSkyblock.getMessages().mustBeAPlayer.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                    return true;
                 }
-            } else {
-                // Command doesnt exist
-                cs.sendMessage("Command doesn't exist");
             }
         }
-        return false;
+        //Help Menu
+        return true;
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.peaches.epicskyblock.commands;
 
 import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -24,14 +25,14 @@ public class FlyCommand extends Command {
                 if (p.isFlying()) {
                     p.setAllowFlight(false);
                     p.setFlying(false);
-                    p.sendMessage("Your flight as been disabled");
+                    p.sendMessage(Utils.color(EpicSkyblock.getMessages().flightDisabled.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 } else {
                     p.setAllowFlight(true);
                     p.setFlying(true);
-                    p.sendMessage("Your flight as been enabled");
+                    p.sendMessage(Utils.color(EpicSkyblock.getMessages().flightEnabled.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 }
             } else {
-                p.sendMessage("Your island booster is not active");
+                p.sendMessage(Utils.color(EpicSkyblock.getMessages().flightBoosterNotActive.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         } else {
             EpicSkyblock.getIslandManager().createIsland(p);

@@ -1,7 +1,9 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.Island;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -29,8 +31,8 @@ public class GiveCrystalsCommand extends Command {
             try {
                 int amount = Integer.parseInt(args[2]);
                 island.setCrystals(island.getCrystals() + amount);
-                sender.sendMessage("You gave " + args[1] + " " + args[2] + " Crystals");
-                player.sendMessage("You gave been given " + args[2] + " Crystals");
+                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().giveCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                player.sendMessage(Utils.color(EpicSkyblock.getMessages().givenCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             } catch (Exception e) {
                 sender.sendMessage(args[2] + "is not a number");
             }

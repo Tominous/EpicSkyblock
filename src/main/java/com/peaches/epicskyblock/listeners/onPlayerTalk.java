@@ -2,6 +2,7 @@ package com.peaches.epicskyblock.listeners;
 
 import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,9 +18,9 @@ public class onPlayerTalk implements Listener {
         if (u.warp != null) {
             if (u.warp.getPassword().equals(e.getMessage())) {
                 Bukkit.getScheduler().runTask(EpicSkyblock.getInstance(), () -> p.teleport(u.warp.getLocation()));
-                p.sendMessage("Teleporting...");
+                        p.sendMessage(Utils.color(EpicSkyblock.getMessages().teleporting.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             } else {
-                p.sendMessage("Wrong password");
+                p.sendMessage(Utils.color(EpicSkyblock.getMessages().wrongPassword.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 u.warp = null;
             }
             e.setCancelled(true);

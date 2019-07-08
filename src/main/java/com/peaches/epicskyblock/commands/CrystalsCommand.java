@@ -1,6 +1,8 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -19,9 +21,9 @@ public class CrystalsCommand extends Command {
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
-            p.sendMessage("You have " + user.getIsland().getCrystals() + " Crystals");
+            sender.sendMessage(Utils.color(EpicSkyblock.getMessages().crystalAmount.replace("%crystals%", user.getIsland().getCrystals() + "").replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         } else {
-            sender.sendMessage("You dont have an island");
+            p.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 

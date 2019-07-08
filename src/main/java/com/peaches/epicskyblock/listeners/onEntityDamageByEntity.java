@@ -21,7 +21,6 @@ public class onEntityDamageByEntity implements Listener {
                     e.setCancelled(true);
                 } else if (damager.getIsland().equals(entity.getIsland()) && damager.getIsland() != null) {
                     e.setCancelled(true);
-                    p.sendMessage("You cannot attack your island members");
                 }
             }
         }

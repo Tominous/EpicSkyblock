@@ -1,6 +1,8 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -21,7 +23,7 @@ public class WarpsCommand extends Command {
         if (user.getIsland() != null) {
             p.openInventory(user.getIsland().getWarpGUI().inventory);
         } else {
-            sender.sendMessage("You dont have an island");
+            sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 

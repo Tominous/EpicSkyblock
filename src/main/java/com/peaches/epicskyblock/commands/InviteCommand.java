@@ -1,6 +1,9 @@
 package com.peaches.epicskyblock.commands;
 
+import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
+import com.peaches.epicskyblock.Utils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -22,15 +25,20 @@ public class InviteCommand extends Command {
         }
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
-        User u = User.getUser(args[1]);
-        if (user.getIsland() != null) {
-            if (u.getIsland() == null) {
-                u.invites.add(user.getIsland().getId());
+        Player player = Bukkit.getPlayer(args[1]);
+        if (player != null) {
+            User u = User.getUser(p.getName());
+            if (user.getIsland() != null) {
+                if (u.getIsland() == null) {
+                    u.invites.add(user.getIsland().getId());
+                } else {
+                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerAlreadyHaveIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                }
             } else {
-                sender.sendMessage("Player already has an island");
+                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         } else {
-            sender.sendMessage("You dont have an island");
+            sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerOffline.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }
     }
 
