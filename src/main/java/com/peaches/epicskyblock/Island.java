@@ -175,8 +175,8 @@ public class Island {
     }
 
     public void removeUser(User user) {
-            user.islandID = 0;
-            members.remove(user.player);
+        user.islandID = 0;
+        members.remove(user.player);
     }
 
     public boolean isInIsland(Location location) {
@@ -250,7 +250,7 @@ public class Island {
         Bukkit.getScheduler().cancelTask(getBoosterGUI().scheduler);
         Bukkit.getScheduler().cancelTask(getMissionsGUI().scheduler);
         Bukkit.getScheduler().cancelTask(getUpgradeGUI().scheduler);
-        Bukkit.getScheduler().cancelTask(getUpgradeGUI().scheduler);
+        Bukkit.getScheduler().cancelTask(getWarpGUI().scheduler);
         if (a != -1) Bukkit.getScheduler().cancelTask(a);
         deleteBlocks();
         killEntities();
