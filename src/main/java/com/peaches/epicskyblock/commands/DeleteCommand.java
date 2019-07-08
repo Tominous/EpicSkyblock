@@ -1,6 +1,5 @@
 package com.peaches.epicskyblock.commands;
 
-import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -20,7 +19,7 @@ public class DeleteCommand extends Command {
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
-            if(user.getIsland().getOwner().equals(p)){
+            if(user.getIsland().getOwner().equals(p.getName())){
                 user.getIsland().delete();
             }else{
                 sender.sendMessage("You must be the island owner to do this");
