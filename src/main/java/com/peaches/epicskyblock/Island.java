@@ -13,6 +13,7 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -84,6 +85,16 @@ public class Island {
 
     private List<Warp> warps;
 
+    private int startvalue;
+
+    public int treasureHunter;
+    public int competitor;
+    public int miner;
+    public int farmer;
+    public int hunter;
+    public int fisherman;
+    public int builder;
+
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
@@ -107,7 +118,26 @@ public class Island {
         warpLevel = 1;
         value = 0;
         warps = new ArrayList<>();
+        treasureHunter = 0;
+        competitor = 0;
+        miner = 0;
+        farmer = 0;
+        hunter = 0;
+        fisherman = 0;
+        builder = 0;
+        startvalue = -1;
         init();
+    }
+
+    public void completeMission(String Mission, int Reward) {
+        crystals += Reward;
+        for (String member : members) {
+            Player p = Bukkit.getPlayer(member);
+            if (p != null) {
+                NMSUtils.sendTitle(p, "&b&lMission Complete: &7" + Mission, 20, 40, 20);
+                NMSUtils.sendSubTitle(p, "&bReward: &7" + Reward, 20, 40, 20);
+            }
+        }
     }
 
     public void calculateIslandValue() {
@@ -125,6 +155,15 @@ public class Island {
             }
         }
         this.value = v;
+        if (startvalue == -1) startvalue = v;
+        this.competitor = v - startvalue;
+
+        if (competitor > -1) {
+            if (competitor >= EpicSkyblock.getMissions().competitor.getAmount()) {
+                competitor = -1;
+                completeMission("Competitor", EpicSkyblock.getMissions().competitor.getAmount());
+            }
+        }
     }
 
     public void initBlocks() {

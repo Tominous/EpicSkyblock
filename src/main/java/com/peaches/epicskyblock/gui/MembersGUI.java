@@ -25,11 +25,12 @@ public class MembersGUI {
     }
 
     public void addContent() {
+        Island island = EpicSkyblock.getIslandManager().islands.get(islandID);
         for (int i = 0; i < 27; i++) {
             inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
         }
         int i = 0;
-        for (String member : EpicSkyblock.getIslandManager().islands.get(islandID).getMembers()) {
+        for (String member : island.getMembers()) {
             ItemStack head = Utils.makeItem(Material.SKULL_ITEM, 1, 3, "&b&l" + member);
             SkullMeta m = (SkullMeta) head.getItemMeta();
             m.setOwner(member);

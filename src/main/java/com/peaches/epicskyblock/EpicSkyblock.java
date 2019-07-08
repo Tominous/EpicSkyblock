@@ -3,6 +3,7 @@ package com.peaches.epicskyblock;
 import com.peaches.epicskyblock.commands.CommandManager;
 import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
+import com.peaches.epicskyblock.configs.Missions;
 import com.peaches.epicskyblock.configs.OreGen;
 import com.peaches.epicskyblock.listeners.*;
 import com.peaches.epicskyblock.placeholders.ClipPlaceholderAPIManager;
@@ -23,6 +24,7 @@ public class EpicSkyblock extends JavaPlugin {
     private static EpicSkyblock instance;
 
     private static Config configuration;
+    private static Missions missions;
     private static OreGen oreGen;
     private static Messages messages;
     private static Persist persist;
@@ -34,19 +36,11 @@ public class EpicSkyblock extends JavaPlugin {
     private ClipPlaceholderAPIManager clipPlaceholderAPIManager;
     /*
     TODO
-    Missions:
-    1 Collect XP
-    2 Break Blocks
-    3 Mine Ores
-    4 Harvest Crops
-    5 Kill Mobs
-    6 Fisherman
-    7 Place Blocks
-
     Way to edit warps
     Messages
     Permissions/Ranks: Owner Moderator Trusted Member
     Add 1.13 Schematics
+    Border Color GUI
      */
 
     @Override
@@ -65,11 +59,7 @@ public class EpicSkyblock extends JavaPlugin {
         loadConfigs();
         saveConfigs();
 
-        for (Island island : islandManager.islands.values()) {
-            island.init();
-        }
-
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity(), new onPlayerExpChange(), new onPlayerFish());
 
         new Metrics(this);
 
@@ -125,13 +115,19 @@ public class EpicSkyblock extends JavaPlugin {
 
     public void loadConfigs() {
         configuration = persist.getFile(Config.class).exists() ? persist.load(Config.class) : new Config();
+        missions = persist.getFile(Missions.class).exists() ? persist.load(Missions.class) : new Missions();
         islandManager = persist.getFile(IslandManager.class).exists() ? persist.load(IslandManager.class) : new IslandManager();
         messages = persist.getFile(Messages.class).exists() ? persist.load(Messages.class) : new Messages();
         oreGen = persist.getFile(OreGen.class).exists() ? persist.load(OreGen.class) : new OreGen();
+
+        for (Island island : islandManager.islands.values()) {
+            island.init();
+        }
     }
 
     public void saveConfigs() {
         persist.save(configuration);
+        persist.save(missions);
         persist.save(islandManager);
         persist.save(messages);
         persist.save(oreGen);
@@ -164,6 +160,10 @@ public class EpicSkyblock extends JavaPlugin {
 
     public static Config getConfiguration() {
         return configuration;
+    }
+
+    public static Missions getMissions() {
+        return missions;
     }
 
     public static CommandManager getCommandManager() {

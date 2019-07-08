@@ -28,11 +28,12 @@ public class UpgradeGUI {
     }
 
     public void addContent() {
+        Island island = EpicSkyblock.getIslandManager().islands.get(islandID);
         for (int i = 0; i < 27; i++) {
             inventory.setItem(i, Utils.makeItem(Material.STAINED_GLASS_PANE, 1, 7, " "));
         }
 
-        int currentsize = EpicSkyblock.getIslandManager().islands.get(islandID).getSizeLevel();
+        int currentsize = island.getSizeLevel();
         String sizecost = EpicSkyblock.getConfiguration().size.containsKey(currentsize + 1) ? EpicSkyblock.getConfiguration().size.get(currentsize + 1).getCost() + " Crystals" : "Max Level Reached";
         List<String> sizeLore = new ArrayList<>(Arrays.asList("&7Need more room to expand? Buy this", "&7upgrade to increase your island size.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentsize, "&b&l * &7Current Size: &b" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + "x" + EpicSkyblock.getConfiguration().size.get(currentsize).getSize() + " Blocks", "&b&l * &7Upgrade Cost: &b" + sizecost, "", "&b&lLevels:"));
         for (int level : EpicSkyblock.getConfiguration().size.keySet()) {
@@ -43,7 +44,7 @@ public class UpgradeGUI {
         this.size = Utils.makeItem(Material.GRASS, 1, 0, "&b&lIsland Size", Utils.color(sizeLore));
 
 
-        int currentmember = EpicSkyblock.getIslandManager().islands.get(islandID).getMemberLevel();
+        int currentmember = island.getMemberLevel();
         String membercost = EpicSkyblock.getConfiguration().member.containsKey(currentmember + 1) ? EpicSkyblock.getConfiguration().member.get(currentmember + 1).getCost() + " Crystals" : "Max Level Reached";
         List<String> memberLore = new ArrayList<>(Arrays.asList("&7Need more members? Buy this", "&7upgrade to increase your member count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentmember, "&b&l * &7Current Members: &b" + EpicSkyblock.getConfiguration().member.get(currentmember).getSize() + " Members", "&b&l * &7Upgrade Cost: &b" + membercost, "", "&b&lLevels:"));
         for (int level : EpicSkyblock.getConfiguration().member.keySet()) {
@@ -54,7 +55,7 @@ public class UpgradeGUI {
         this.member = Utils.makeItem(Material.ARMOR_STAND, 1, 0, "&b&lIsland Member Count", Utils.color(memberLore));
 
 
-        int currentwarp = EpicSkyblock.getIslandManager().islands.get(islandID).getWarpLevel();
+        int currentwarp = island.getWarpLevel();
         String warpcost = EpicSkyblock.getConfiguration().warp.containsKey(currentwarp + 1) ? EpicSkyblock.getConfiguration().warp.get(currentwarp + 1).getCost() + " Crystals" : "Max Level Reached";
         List<String> warpLore = new ArrayList<>(Arrays.asList("&7Need more island warps? Buy this", "&7upgrade to increase your warp count.", "", "&b&lInformation:", "&b&l * &7Current Level: &b" + currentwarp, "&b&l * &7Current Warps: &b" + EpicSkyblock.getConfiguration().warp.get(currentwarp).getSize() + " Warps", "&b&l * &7Upgrade Cost: &b" + warpcost, "", "&b&lLevels:"));
         for (int level : EpicSkyblock.getConfiguration().warp.keySet()) {
