@@ -191,12 +191,12 @@ public class Island {
         }
         this.value = v;
         if (startvalue == -1) startvalue = v;
-        this.competitor = v - startvalue;
 
         if (competitor > -1) {
+            this.competitor = v - startvalue;
             if (competitor >= EpicSkyblock.getMissions().competitor.getAmount()) {
                 competitor = -1;
-                completeMission("Competitor", EpicSkyblock.getMissions().competitor.getAmount());
+                completeMission("Competitor", EpicSkyblock.getMissions().competitor.getReward());
             }
         }
     }
