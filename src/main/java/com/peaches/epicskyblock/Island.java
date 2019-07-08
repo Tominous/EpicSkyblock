@@ -301,6 +301,7 @@ public class Island {
     }
 
     public void teleportHome(Player p) {
+        p.sendMessage(Utils.color(EpicSkyblock.getMessages().teleportingHome.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         if (Utils.isSafe(getHome())) {
             p.teleport(getHome());
             sendBorder(p);

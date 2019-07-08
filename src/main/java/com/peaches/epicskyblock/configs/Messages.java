@@ -29,5 +29,6 @@ public class Messages {
     public String givenCrystals = "%prefix% &7You have been given %crystals% crystals by %player%.";
     public String wrongPassword = "%prefix% &7Wrong password.";
     public String enterPassword = "%prefix% &7Enter password.";
+    public String teleportingHome = "%prefix% &7Teleporting home...";
 
 }
