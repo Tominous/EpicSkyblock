@@ -40,6 +40,7 @@ public class EpicSkyblock extends JavaPlugin {
 
     Way to edit warps
     Messages
+    Placeholders
      */
 
     @Override

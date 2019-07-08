@@ -31,9 +31,14 @@ public class TopGUI {
         List<Island> top = Utils.getTopIslands();
         for (int i = 1; i <= 10; i++) {
             if (top.size() >= i) {
-                ItemStack head = Utils.makeItem(Material.SKULL_ITEM, 1, 3, "&b&l" + top.get(i - 1).getOwner());
+                ArrayList<String> lore = new ArrayList<>();
+                Island island = top.get(i - 1);
+                lore.add("&b&l * &7Leader: &b" + island.getOwner());
+                lore.add("&b&l * &7Rank: &b" + i);
+                lore.add("&b&l * &7Value: &b" + island.getValue());
+                ItemStack head = Utils.makeItem(Material.SKULL_ITEM, 1, 3, "&b&l" + island.getOwner(), Utils.color(lore));
                 SkullMeta m = (SkullMeta) head.getItemMeta();
-                m.setOwner(top.get(i - 1).getOwner());
+                m.setOwner(island.getOwner());
                 head.setItemMeta(m);
                 inventory.setItem(EpicSkyblock.getConfiguration().islandTopSlots.get(i), head);
             }
