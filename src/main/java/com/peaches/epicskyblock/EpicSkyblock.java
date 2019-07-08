@@ -59,7 +59,7 @@ public class EpicSkyblock extends JavaPlugin {
         loadConfigs();
         saveConfigs();
 
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity(), new onPlayerExpChange(), new onPlayerFish());
+        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity(), new onPlayerExpChange(), new onPlayerFish(), new onEntityExplode());
 
         new Metrics(this);
 
@@ -76,10 +76,10 @@ public class EpicSkyblock extends JavaPlugin {
         getLogger().info("-------------------------------");
     }
 
-    public void startCounting(){
+    public void startCounting() {
         Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> {
-            if(LocalDateTime.now().getDayOfWeek().equals(DayOfWeek.MONDAY) && LocalDateTime.now().getHour() == 0 && LocalDateTime.now().getMinute() == 0 && LocalDateTime.now().getSecond() == 0){
-                for(Island island : getIslandManager().islands.values()){
+            if (LocalDateTime.now().getDayOfWeek().equals(DayOfWeek.MONDAY) && LocalDateTime.now().getHour() == 0 && LocalDateTime.now().getMinute() == 0 && LocalDateTime.now().getSecond() == 0) {
+                for (Island island : getIslandManager().islands.values()) {
                     island.treasureHunter = 0;
                     island.competitor = 0;
                     island.miner = 0;
