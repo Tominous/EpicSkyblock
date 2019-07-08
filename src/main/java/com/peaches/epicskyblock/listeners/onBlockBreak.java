@@ -21,7 +21,7 @@ public class onBlockBreak implements Listener {
                         u.getIsland().miner++;
                         if (u.getIsland().miner >= EpicSkyblock.getMissions().miner.getAmount()) {
                             u.getIsland().miner = -1;
-                            u.getIsland().completeMission("Miner", EpicSkyblock.getMissions().miner.getAmount());
+                            u.getIsland().completeMission("Miner", EpicSkyblock.getMissions().miner.getReward());
                         }
                     }
                 }
@@ -30,7 +30,7 @@ public class onBlockBreak implements Listener {
                         u.getIsland().farmer++;
                         if (u.getIsland().farmer >= EpicSkyblock.getMissions().farmer.getAmount()) {
                             u.getIsland().farmer = -1;
-                            u.getIsland().completeMission("Farmer", EpicSkyblock.getMissions().farmer.getAmount());
+                            u.getIsland().completeMission("Farmer", EpicSkyblock.getMissions().farmer.getReward());
                         }
                     }
                 }

@@ -20,7 +20,7 @@ public class onBlockPlace implements Listener {
                     island.builder++;
                     if (island.builder >= EpicSkyblock.getMissions().builder.getAmount()) {
                         island.builder = -1;
-                        island.completeMission("Builder", EpicSkyblock.getMissions().builder.getAmount());
+                        island.completeMission("Builder", EpicSkyblock.getMissions().builder.getReward());
                     }
                 }
                 if (island.isInIsland(e.getBlock().getLocation())) {

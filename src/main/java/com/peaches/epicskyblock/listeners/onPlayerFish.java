@@ -17,7 +17,7 @@ public class onPlayerFish implements Listener {
                     u.getIsland().fisherman++;
                     if (u.getIsland().fisherman >= EpicSkyblock.getMissions().fisherman.getAmount()) {
                         u.getIsland().fisherman = -1;
-                        u.getIsland().completeMission("Fisherman", EpicSkyblock.getMissions().fisherman.getAmount());
+                        u.getIsland().completeMission("Fisherman", EpicSkyblock.getMissions().fisherman.getReward());
                     }
                 }
             }

@@ -18,7 +18,7 @@ public class onPlayerExpChange implements Listener {
                 user.getIsland().treasureHunter += e.getAmount();
                 if (user.getIsland().treasureHunter >= EpicSkyblock.getMissions().treasureHunter.getAmount()) {
                     user.getIsland().treasureHunter = -1;
-                    user.getIsland().completeMission("Treasure Hunter", EpicSkyblock.getMissions().treasureHunter.getAmount());
+                    user.getIsland().completeMission("Treasure Hunter", EpicSkyblock.getMissions().treasureHunter.getReward());
                 }
             }
         }

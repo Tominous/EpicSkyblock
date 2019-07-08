@@ -18,7 +18,7 @@ public class onEntityDeath implements Listener {
             island.hunter++;
             if (island.hunter >= EpicSkyblock.getMissions().hunter.getAmount()) {
                 island.hunter = -1;
-                island.completeMission("Hunter", EpicSkyblock.getMissions().hunter.getAmount());
+                island.completeMission("Hunter", EpicSkyblock.getMissions().hunter.getReward());
             }
         }
         if (island.getExpBooster() != 0) {
