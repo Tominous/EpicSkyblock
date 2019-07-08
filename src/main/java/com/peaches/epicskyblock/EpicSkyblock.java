@@ -36,9 +36,9 @@ public class EpicSkyblock extends JavaPlugin {
     private ClipPlaceholderAPIManager clipPlaceholderAPIManager;
     /*
     TODO
-    Way to edit warps
     Messages
     Permissions/Ranks: Owner Moderator Trusted Member
+    Way to edit warps
     Add 1.13 Schematics
      */
 

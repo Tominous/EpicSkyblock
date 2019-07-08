@@ -134,6 +134,36 @@ public class Island {
         init();
     }
 
+    public void sendBorder() {
+        for (Chunk c : chunks) {
+            for (Entity e : c.getEntities()) {
+                if (e instanceof Player) {
+                    Player p = (Player) e;
+                    sendBorder(p);
+                }
+            }
+        }
+    }
+
+    public void hideBorder() {
+        for (Chunk c : chunks) {
+            for (Entity e : c.getEntities()) {
+                if (e instanceof Player) {
+                    Player p = (Player) e;
+                    hideBorder(p);
+                }
+            }
+        }
+    }
+
+    public void sendBorder(Player p) {
+        NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+    }
+
+    public void hideBorder(Player p) {
+        NMSUtils.sendWorldBorder(p, borderColor, Integer.MAX_VALUE, getCenter());
+    }
+
     public void completeMission(String Mission, int Reward) {
         crystals += Reward;
         for (String member : members) {
@@ -273,18 +303,18 @@ public class Island {
     public void teleportHome(Player p) {
         if (Utils.isSafe(getHome())) {
             p.teleport(getHome());
-            NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+            sendBorder(p);
         } else {
 
             Location loc = Utils.getNewHome(this, this.home);
             if (loc != null) {
                 this.home = loc;
                 p.teleport(this.home);
-                NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+                sendBorder(p);
             } else {
                 generateIsland();
                 teleportHome(p);
-                NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+                sendBorder(p);
             }
         }
     }
@@ -302,14 +332,7 @@ public class Island {
             User.getUser(player).islandID = 0;
             if (Bukkit.getPlayer(player) != null) Bukkit.getPlayer(player).closeInventory();
         }
-        for (Chunk c : chunks) {
-            for (Entity e : c.getEntities()) {
-                if (e instanceof Player) {
-                    Player p = (Player) e;
-                    NMSUtils.sendWorldBorder(p, borderColor, Integer.MAX_VALUE, getCenter());
-                }
-            }
-        }
+        hideBorder();
         this.owner = null;
         this.pos1 = null;
         this.pos2 = null;

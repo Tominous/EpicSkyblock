@@ -79,7 +79,7 @@ public class onInventoryClick implements Listener {
                         if (user.getIsland().getCrystals() >= EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost()) {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost());
                             user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
-                            NMSUtils.sendWorldBorder(p, user.getIsland().getBorderColor(), EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
+                            user.getIsland().sendBorder();
                         } else {
                             p.sendMessage("You dont have enough Crystals");
                         }
@@ -126,8 +126,7 @@ public class onInventoryClick implements Listener {
                     user.getIsland().setBorderColor(NMSUtils.Color.Red);
                 if (e.getCurrentItem().equals(user.getIsland().getBorderColorGUI().green))
                     user.getIsland().setBorderColor(NMSUtils.Color.Green);
-                NMSUtils.sendWorldBorder(p, user.getIsland().getBorderColor(), EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
-
+                user.getIsland().sendBorder();
             }
             if (e.getInventory().equals(user.getIsland().getWarpGUI().inventory)) {
                 e.setCancelled(true);
