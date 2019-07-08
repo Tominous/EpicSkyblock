@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="46" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" line="45" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/ClipPlaceholderAPIManager.java" line="49" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b0b0bba-4aa9-4e00-9d8c-ec762622518d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Missions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerExpChange.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerFish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BorderColorGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BoosterGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BoosterGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MembersGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MembersGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MissionsGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MissionsGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/UpgradeGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/UpgradeGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/WarpGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/WarpGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockBreak.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDeath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDeath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -35,46 +28,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-129">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+            <state relative-caret-position="216">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+              <folding>
+                <element signature="e#5653#5654#0" expanded="true" />
+                <element signature="e#5689#5690#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="165" column="9" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+            <state relative-caret-position="471">
+              <caret line="396" column="72" selection-start-line="396" selection-start-column="72" selection-end-line="396" selection-end-column="72" />
               <folding>
-                <element signature="e#11593#11594#0" expanded="true" />
-                <element signature="e#11653#11654#0" expanded="true" />
-                <element signature="e#11717#11718#0" expanded="true" />
-                <element signature="e#11777#11778#0" expanded="true" />
-                <element signature="e#11837#11838#0" expanded="true" />
-                <element signature="e#11888#11889#0" expanded="true" />
-                <element signature="e#12656#12657#0" expanded="true" />
-                <element signature="e#12765#12766#0" expanded="true" />
-                <element signature="e#12840#12841#0" expanded="true" />
-                <element signature="e#12949#12950#0" expanded="true" />
-                <element signature="e#13016#13017#0" expanded="true" />
-                <element signature="e#13109#13110#0" expanded="true" />
-                <element signature="e#13182#13183#0" expanded="true" />
-                <element signature="e#13287#13288#0" expanded="true" />
-                <element signature="e#13350#13351#0" expanded="true" />
-                <element signature="e#13435#13436#0" expanded="true" />
+                <element signature="e#11751#11752#0" expanded="true" />
+                <element signature="e#11811#11812#0" expanded="true" />
+                <element signature="e#11875#11876#0" expanded="true" />
+                <element signature="e#11935#11936#0" expanded="true" />
+                <element signature="e#11995#11996#0" expanded="true" />
+                <element signature="e#12046#12047#0" expanded="true" />
+                <element signature="e#12979#12980#0" expanded="true" />
+                <element signature="e#13088#13089#0" expanded="true" />
+                <element signature="e#13163#13164#0" expanded="true" />
+                <element signature="e#13272#13273#0" expanded="true" />
+                <element signature="e#13339#13340#0" expanded="true" />
+                <element signature="e#13432#13433#0" expanded="true" />
                 <element signature="e#13505#13506#0" expanded="true" />
-                <element signature="e#13570#13571#0" expanded="true" />
-                <element signature="e#14088#14089#0" expanded="true" />
-                <element signature="e#14185#14186#0" expanded="true" />
-                <element signature="e#14250#14251#0" expanded="true" />
-                <element signature="e#14339#14340#0" expanded="true" />
-                <element signature="e#14403#14404#0" expanded="true" />
-                <element signature="e#14460#14461#0" expanded="true" />
+                <element signature="e#13610#13611#0" expanded="true" />
+                <element signature="e#13673#13674#0" expanded="true" />
+                <element signature="e#13758#13759#0" expanded="true" />
+                <element signature="e#13828#13829#0" expanded="true" />
+                <element signature="e#13893#13894#0" expanded="true" />
+                <element signature="e#14411#14412#0" expanded="true" />
+                <element signature="e#14508#14509#0" expanded="true" />
+                <element signature="e#14573#14574#0" expanded="true" />
+                <element signature="e#14662#14663#0" expanded="true" />
+                <element signature="e#14726#14727#0" expanded="true" />
+                <element signature="e#14783#14784#0" expanded="true" />
+                <element signature="e#14592#14593#0" expanded="true" />
+                <element signature="e#14626#14627#0" expanded="true" />
+                <element signature="e#14688#14689#0" expanded="true" />
+                <element signature="e#14734#14735#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="123" column="73" selection-start-line="123" selection-start-column="73" selection-end-line="123" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BorderColorGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="22" column="121" selection-start-line="22" selection-start-column="121" selection-end-line="22" selection-end-column="121" />
             </state>
           </provider>
         </entry>
@@ -107,6 +168,9 @@
       <find>addus</find>
       <find>delete</find>
       <find>EpicSkyblock.getIslandManager().islands.get(islandID)</find>
+      <find>worldbor</find>
+      <find>completeMission(&quot;</find>
+      <find>sendwor</find>
     </findStrings>
     <replaceStrings>
       <replace>island</replace>
@@ -118,15 +182,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/Command.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/NMSUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onSpawnerSpawn.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerTeleport.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockGrow.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/IslandManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/BoosterCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/InviteCommand.java" />
@@ -141,9 +202,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerTalk.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDamage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/ValueCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/TopCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/placeholders/clipPlaceholderManager.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
@@ -152,7 +211,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/DeleteCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/RegenCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/LeaveCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/MembersGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BoosterGUI.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/TopGUI.java" />
@@ -167,8 +225,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onEntityDeath.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onBlockPlace.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerFish.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BorderColorGUI.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java" />
       </list>
     </option>
   </component>
@@ -245,6 +309,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EpicSkyblock" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="epicskyblock" type="462c0819:PsiDirectoryNode" />
+              <item name="commands" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EpicSkyblock" type="b2602c69:ProjectViewProjectNode" />
@@ -545,14 +618,21 @@
       <option name="project" value="LOCAL" />
       <updated>1562596213044</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Finished Island Missions">
+      <created>1562601151783</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1562601151783</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="0" width="1924" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28177083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28177083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -561,19 +641,19 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.21451104" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4984375" visible="true" weight="0.21451104" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32912722" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50104165" side_tool="true" weight="0.32912722" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015625" side_tool="true" visible="true" weight="0.21451104" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.1765625" />
+      <window_info active="true" anchor="right" id="Maven" order="4" visible="true" weight="0.1765625" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -607,7 +687,6 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Finished Fly booster" />
     <MESSAGE value="Added Farming Booster" />
     <MESSAGE value="Fixed island member list not getting player texture correctly" />
     <MESSAGE value="Added island size upgrade" />
@@ -632,33 +711,10 @@
     <MESSAGE value="Added /is leave command" />
     <MESSAGE value="Fixed a typo which was causing a npe to occur" />
     <MESSAGE value="Disabled damage in the skyblock world" />
-    <option name="LAST_COMMIT_MESSAGE" value="Disabled damage in the skyblock world" />
+    <MESSAGE value="Finished Island Missions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Island Missions" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CreateCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CrystalsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="66" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/FlyCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/GiveCrystalsCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -777,16 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="57" column="18" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/spigotmc/spigot-api/1.12.2-R0.1-SNAPSHOT/spigot-api-1.12.2-R0.1-SNAPSHOT.jar!/org/bukkit/inventory/meta/SkullMeta.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -798,13 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -879,16 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,42 +1045,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onPlayerJoinLeave.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-129">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/Island.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="165" column="9" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+        <state relative-caret-position="471">
+          <caret line="396" column="72" selection-start-line="396" selection-start-column="72" selection-end-line="396" selection-end-column="72" />
           <folding>
-            <element signature="e#11593#11594#0" expanded="true" />
-            <element signature="e#11653#11654#0" expanded="true" />
-            <element signature="e#11717#11718#0" expanded="true" />
-            <element signature="e#11777#11778#0" expanded="true" />
-            <element signature="e#11837#11838#0" expanded="true" />
-            <element signature="e#11888#11889#0" expanded="true" />
-            <element signature="e#12656#12657#0" expanded="true" />
-            <element signature="e#12765#12766#0" expanded="true" />
-            <element signature="e#12840#12841#0" expanded="true" />
-            <element signature="e#12949#12950#0" expanded="true" />
-            <element signature="e#13016#13017#0" expanded="true" />
-            <element signature="e#13109#13110#0" expanded="true" />
-            <element signature="e#13182#13183#0" expanded="true" />
-            <element signature="e#13287#13288#0" expanded="true" />
-            <element signature="e#13350#13351#0" expanded="true" />
-            <element signature="e#13435#13436#0" expanded="true" />
+            <element signature="e#11751#11752#0" expanded="true" />
+            <element signature="e#11811#11812#0" expanded="true" />
+            <element signature="e#11875#11876#0" expanded="true" />
+            <element signature="e#11935#11936#0" expanded="true" />
+            <element signature="e#11995#11996#0" expanded="true" />
+            <element signature="e#12046#12047#0" expanded="true" />
+            <element signature="e#12979#12980#0" expanded="true" />
+            <element signature="e#13088#13089#0" expanded="true" />
+            <element signature="e#13163#13164#0" expanded="true" />
+            <element signature="e#13272#13273#0" expanded="true" />
+            <element signature="e#13339#13340#0" expanded="true" />
+            <element signature="e#13432#13433#0" expanded="true" />
             <element signature="e#13505#13506#0" expanded="true" />
-            <element signature="e#13570#13571#0" expanded="true" />
-            <element signature="e#14088#14089#0" expanded="true" />
-            <element signature="e#14185#14186#0" expanded="true" />
-            <element signature="e#14250#14251#0" expanded="true" />
-            <element signature="e#14339#14340#0" expanded="true" />
-            <element signature="e#14403#14404#0" expanded="true" />
-            <element signature="e#14460#14461#0" expanded="true" />
+            <element signature="e#13610#13611#0" expanded="true" />
+            <element signature="e#13673#13674#0" expanded="true" />
+            <element signature="e#13758#13759#0" expanded="true" />
+            <element signature="e#13828#13829#0" expanded="true" />
+            <element signature="e#13893#13894#0" expanded="true" />
+            <element signature="e#14411#14412#0" expanded="true" />
+            <element signature="e#14508#14509#0" expanded="true" />
+            <element signature="e#14573#14574#0" expanded="true" />
+            <element signature="e#14662#14663#0" expanded="true" />
+            <element signature="e#14726#14727#0" expanded="true" />
+            <element signature="e#14783#14784#0" expanded="true" />
+            <element signature="e#14592#14593#0" expanded="true" />
+            <element signature="e#14626#14627#0" expanded="true" />
+            <element signature="e#14688#14689#0" expanded="true" />
+            <element signature="e#14734#14735#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/listeners/onInventoryClick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="123" column="73" selection-start-line="123" selection-start-column="73" selection-end-line="123" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/CommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/configs/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/commands/WorldBorderCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/gui/BorderColorGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="121" selection-start-line="22" selection-start-column="121" selection-end-line="22" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/peaches/epicskyblock/EpicSkyblock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding>
+            <element signature="e#5653#5654#0" expanded="true" />
+            <element signature="e#5689#5690#0" expanded="true" />
           </folding>
         </state>
       </provider>

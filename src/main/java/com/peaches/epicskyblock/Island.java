@@ -61,6 +61,7 @@ public class Island {
     private transient MissionsGUI missionsGUI;
     private transient MembersGUI membersGUI;
     private transient WarpGUI warpGUI;
+    private transient BorderColorGUI borderColorGUI;
 
     private int id;
 
@@ -95,6 +96,8 @@ public class Island {
     public int fisherman;
     public int builder;
 
+    private NMSUtils.Color borderColor;
+
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
         this.owner = owner.getName();
         this.pos1 = pos1;
@@ -108,6 +111,7 @@ public class Island {
         missionsGUI = new MissionsGUI(this);
         membersGUI = new MembersGUI(this);
         warpGUI = new WarpGUI(this);
+        borderColorGUI = new BorderColorGUI(this);
         spawnerBooster = 0;
         farmingBooster = 0;
         expBooster = 0;
@@ -126,6 +130,7 @@ public class Island {
         fisherman = 0;
         builder = 0;
         startvalue = -1;
+        borderColor = NMSUtils.Color.Blue;
         init();
     }
 
@@ -268,18 +273,18 @@ public class Island {
     public void teleportHome(Player p) {
         if (Utils.isSafe(getHome())) {
             p.teleport(getHome());
-            NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+            NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
         } else {
 
             Location loc = Utils.getNewHome(this, this.home);
             if (loc != null) {
                 this.home = loc;
                 p.teleport(this.home);
-                NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+                NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
             } else {
                 generateIsland();
                 teleportHome(p);
-                NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
+                NMSUtils.sendWorldBorder(p, borderColor, EpicSkyblock.getConfiguration().size.get(sizeLevel).getSize(), getCenter());
             }
         }
     }
@@ -301,7 +306,7 @@ public class Island {
             for (Entity e : c.getEntities()) {
                 if (e instanceof Player) {
                     Player p = (Player) e;
-                    NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, Integer.MAX_VALUE, getCenter());
+                    NMSUtils.sendWorldBorder(p, borderColor, Integer.MAX_VALUE, getCenter());
                 }
             }
         }
@@ -388,6 +393,11 @@ public class Island {
         return warpGUI;
     }
 
+    public BorderColorGUI getBorderColorGUI() {
+        if (borderColorGUI == null) borderColorGUI = new BorderColorGUI(this);
+        return borderColorGUI;
+    }
+
     public int getSpawnerBooster() {
         return spawnerBooster;
     }
@@ -465,5 +475,13 @@ public class Island {
 
     public int getValue() {
         return value;
+    }
+
+    public NMSUtils.Color getBorderColor() {
+        return borderColor;
+    }
+
+    public void setBorderColor(NMSUtils.Color borderColor) {
+        this.borderColor = borderColor;
     }
 }

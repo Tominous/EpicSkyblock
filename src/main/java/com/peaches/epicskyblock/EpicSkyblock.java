@@ -40,7 +40,6 @@ public class EpicSkyblock extends JavaPlugin {
     Messages
     Permissions/Ranks: Owner Moderator Trusted Member
     Add 1.13 Schematics
-    Border Color GUI
      */
 
     @Override

@@ -40,6 +40,7 @@ public class CommandManager implements CommandExecutor, TabCompleter {
         new ValueCommand();
         new TopCommand();
         new LeaveCommand();
+        new WorldBorderCommand();
     }
 
     public void registerCommand(com.peaches.epicskyblock.commands.Command command) {

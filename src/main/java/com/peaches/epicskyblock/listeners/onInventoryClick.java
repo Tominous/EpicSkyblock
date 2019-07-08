@@ -79,7 +79,7 @@ public class onInventoryClick implements Listener {
                         if (user.getIsland().getCrystals() >= EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost()) {
                             user.getIsland().setCrystals(user.getIsland().getCrystals() - EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel() + 1).getCost());
                             user.getIsland().setSizeLevel(user.getIsland().getSizeLevel() + 1);
-                            NMSUtils.sendWorldBorder(p, NMSUtils.Color.Blue, EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
+                            NMSUtils.sendWorldBorder(p, user.getIsland().getBorderColor(), EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
                         } else {
                             p.sendMessage("You dont have enough Crystals");
                         }
@@ -117,6 +117,17 @@ public class onInventoryClick implements Listener {
             }
             if (e.getInventory().equals(TopGUI.inventory)) {
                 e.setCancelled(true);
+            }
+            if (e.getInventory().equals(user.getIsland().getBorderColorGUI().inventory)) {
+                e.setCancelled(true);
+                if (e.getCurrentItem().equals(user.getIsland().getBorderColorGUI().blue))
+                    user.getIsland().setBorderColor(NMSUtils.Color.Blue);
+                if (e.getCurrentItem().equals(user.getIsland().getBorderColorGUI().red))
+                    user.getIsland().setBorderColor(NMSUtils.Color.Red);
+                if (e.getCurrentItem().equals(user.getIsland().getBorderColorGUI().green))
+                    user.getIsland().setBorderColor(NMSUtils.Color.Green);
+                NMSUtils.sendWorldBorder(p, user.getIsland().getBorderColor(), EpicSkyblock.getConfiguration().size.get(user.getIsland().getSizeLevel()).getSize(), user.getIsland().getCenter());
+
             }
             if (e.getInventory().equals(user.getIsland().getWarpGUI().inventory)) {
                 e.setCancelled(true);
