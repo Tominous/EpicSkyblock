@@ -1,6 +1,5 @@
 package com.peaches.epicskyblock.commands;
 
-import com.peaches.epicskyblock.EpicSkyblock;
 import com.peaches.epicskyblock.User;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -20,7 +19,11 @@ public class RegenCommand extends Command {
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
-            user.getIsland().generateIsland();
+            if (user.getIsland().getOwner().equals(p.getName())) {
+                user.getIsland().generateIsland();
+            } else {
+                sender.sendMessage("You must be the island owner to do this");
+            }
         } else {
             sender.sendMessage("You dont have an island");
         }
