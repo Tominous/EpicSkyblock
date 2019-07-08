@@ -174,6 +174,11 @@ public class Island {
         }
     }
 
+    public void removeUser(User user) {
+            user.islandID = 0;
+            members.remove(user.player);
+    }
+
     public boolean isInIsland(Location location) {
         return (location.getX() > getPos1().getX() && location.getX() <= getPos2().getX()) && (location.getZ() > getPos1().getZ() && location.getZ() <= getPos2().getZ());
     }
