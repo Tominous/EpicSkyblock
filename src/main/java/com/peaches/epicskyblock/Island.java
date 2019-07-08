@@ -146,6 +146,7 @@ public class Island {
                     }
                 } else {
                     Bukkit.getScheduler().cancelTask(a);
+                    a = -1;
                 }
                 Y++;
             }
@@ -244,6 +245,8 @@ public class Island {
         Bukkit.getScheduler().cancelTask(getBoosterGUI().scheduler);
         Bukkit.getScheduler().cancelTask(getMissionsGUI().scheduler);
         Bukkit.getScheduler().cancelTask(getUpgradeGUI().scheduler);
+        Bukkit.getScheduler().cancelTask(getUpgradeGUI().scheduler);
+        if (a != -1) Bukkit.getScheduler().cancelTask(a);
         deleteBlocks();
         killEntities();
         for (String player : members) {
