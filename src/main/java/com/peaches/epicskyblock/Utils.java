@@ -58,6 +58,16 @@ public class Utils {
                 && (!loc.clone().add(0, -1, 0).getBlock().getType().equals(Material.AIR) && !loc.clone().add(0, -1, 0).getBlock().isLiquid()));
     }
 
+    public static int getIslandRank(Island island) {
+        int i = 1;
+        for (Island is : getTopIslands()) {
+            if (is.equals(island)) {
+                return i;
+            }
+            i++;
+        }
+        return 0;
+    }
 
     public static Location getNewHome(Island island, Location loc) {
         Block b;

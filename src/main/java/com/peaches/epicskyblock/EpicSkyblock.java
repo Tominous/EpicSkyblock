@@ -5,15 +5,18 @@ import com.peaches.epicskyblock.configs.Config;
 import com.peaches.epicskyblock.configs.Messages;
 import com.peaches.epicskyblock.configs.OreGen;
 import com.peaches.epicskyblock.listeners.*;
+import com.peaches.epicskyblock.placeholders.ClipPlaceholderAPIManager;
 import com.peaches.epicskyblock.serializer.Persist;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.logging.Level;
 
 public class EpicSkyblock extends JavaPlugin {
 
@@ -27,6 +30,8 @@ public class EpicSkyblock extends JavaPlugin {
     private static IslandManager islandManager;
 
     private static CommandManager commandManager;
+
+    private ClipPlaceholderAPIManager clipPlaceholderAPIManager;
     /*
     TODO
     Missions:
@@ -40,7 +45,6 @@ public class EpicSkyblock extends JavaPlugin {
 
     Way to edit warps
     Messages
-    Placeholders
      */
 
     @Override
@@ -69,6 +73,8 @@ public class EpicSkyblock extends JavaPlugin {
 
         Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> getPersist().save(islandManager), 0, 20);
 
+        setupPlaceholderAPI();
+
         getLogger().info("-------------------------------");
         getLogger().info("");
         getLogger().info(getDescription().getName() + " Enabled!");
@@ -89,6 +95,16 @@ public class EpicSkyblock extends JavaPlugin {
     private void registerListeners(Listener... listener) {
         for (Listener l : listener) {
             Bukkit.getPluginManager().registerEvents(l, this);
+        }
+    }
+
+    private void setupPlaceholderAPI() {
+        Plugin clip = getServer().getPluginManager().getPlugin("PlaceholderAPI");
+        if (clip != null && clip.isEnabled()) {
+            this.clipPlaceholderAPIManager = new ClipPlaceholderAPIManager();
+            if (this.clipPlaceholderAPIManager.register()) {
+                getLogger().info("Successfully registered placeholders with PlaceholderAPI.");
+            }
         }
     }
 
