@@ -13,7 +13,7 @@ import java.util.List;
 public class ValueCommand extends Command {
 
     public ValueCommand() {
-        super(new ArrayList<>(Arrays.asList("value")), "Shows your island value","", true);
+        super(new ArrayList<>(Arrays.asList("value")), "Shows your island value", "", true);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ValueCommand extends Command {
         Player p = (Player) sender;
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
-            p.sendMessage(user.getIsland().getValue()+"");
+            p.sendMessage(Utils.color(EpicSkyblock.getMessages().islandValue.replace("%value%", user.getIsland().getValue() + "").replace("%rank%", Utils.getIslandRank(user.getIsland()) + "").replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         } else {
             p.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }

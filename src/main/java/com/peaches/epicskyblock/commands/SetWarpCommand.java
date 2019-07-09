@@ -13,7 +13,7 @@ import java.util.List;
 public class SetWarpCommand extends Command {
 
     public SetWarpCommand() {
-        super(new ArrayList<>(Arrays.asList("setwarp", "addwarp")),"Set a new island warp", "", true);
+        super(new ArrayList<>(Arrays.asList("setwarp", "addwarp")), "Set a new island warp", "", true);
     }
 
     @Override

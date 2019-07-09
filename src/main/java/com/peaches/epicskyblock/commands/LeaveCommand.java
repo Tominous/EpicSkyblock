@@ -13,7 +13,7 @@ import java.util.List;
 public class LeaveCommand extends Command {
 
     public LeaveCommand() {
-        super(new ArrayList<>(Arrays.asList("leave")), "Leave an island","", true);
+        super(new ArrayList<>(Arrays.asList("leave")), "Leave an island", "", true);
     }
 
     @Override
@@ -22,6 +22,7 @@ public class LeaveCommand extends Command {
         User user = User.getUser(p.getName());
         if (user.getIsland() != null) {
             user.getIsland().removeUser(user);
+            sender.sendMessage(Utils.color(EpicSkyblock.getMessages().leftIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         } else {
             sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
         }

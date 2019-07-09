@@ -15,7 +15,7 @@ import java.util.List;
 public class GiveCrystalsCommand extends Command {
 
     public GiveCrystalsCommand() {
-        super(new ArrayList<>(Arrays.asList("givecrystals")),"Give a player Crystals", "EpicSkyblock.givecrystals", false);
+        super(new ArrayList<>(Arrays.asList("givecrystals")), "Give a player Crystals", "EpicSkyblock.givecrystals", false);
     }
 
     @Override
@@ -27,14 +27,22 @@ public class GiveCrystalsCommand extends Command {
 
         if (Bukkit.getPlayer(args[1]) != null) {
             Player player = Bukkit.getPlayer(args[1]);
-            Island island = User.getUser(args[1]).getIsland();
-            try {
-                int amount = Integer.parseInt(args[2]);
-                island.setCrystals(island.getCrystals() + amount);
-                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().giveCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
-                player.sendMessage(Utils.color(EpicSkyblock.getMessages().givenCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
-            } catch (Exception e) {
-                sender.sendMessage(args[2] + "is not a number");
+            if (player != null) {
+                Island island = User.getUser(player.getName()).getIsland();
+                if (island != null) {
+                    try {
+                        int amount = Integer.parseInt(args[2]);
+                        island.setCrystals(island.getCrystals() + amount);
+                        sender.sendMessage(Utils.color(EpicSkyblock.getMessages().giveCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                        player.sendMessage(Utils.color(EpicSkyblock.getMessages().givenCrystals.replace("%crystals%", args[2]).replace("%player%", player.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                    } catch (Exception e) {
+                        sender.sendMessage(args[2] + "is not a number");
+                    }
+                } else {
+                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerNoIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                }
+            } else {
+                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerOffline.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
         }
     }

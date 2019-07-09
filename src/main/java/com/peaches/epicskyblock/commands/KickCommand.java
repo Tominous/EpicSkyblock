@@ -11,16 +11,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class InviteCommand extends Command {
+public class KickCommand extends Command {
 
-    public InviteCommand() {
-        super(new ArrayList<>(Arrays.asList("invite")), "Invite a player to your island", "", true);
+    public KickCommand() {
+        super(new ArrayList<>(Arrays.asList("kick")), "Kick a player from your island", "", true);
     }
 
     @Override
     public void execute(CommandSender sender, String[] args) {
         if (args.length != 2) {
-            sender.sendMessage("/is invite <player>");
+            sender.sendMessage("/is kick <player>");
             return;
         }
         Player p = (Player) sender;
@@ -29,12 +29,11 @@ public class InviteCommand extends Command {
         if (player != null) {
             User u = User.getUser(p.getName());
             if (user.getIsland() != null) {
-                if (u.getIsland() == null) {
-                    u.invites.add(user.getIsland().getId());
-                    p.sendMessage(Utils.color(EpicSkyblock.getMessages().playerInvited.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
-                    player.sendMessage(Utils.color(EpicSkyblock.getMessages().invitedByPlayer.replace("%player%", p.getName()).replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                if (user.getIsland().equals(u.getIsland())) {
+                    user.getIsland().removeUser(u);
+                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().kickedMember.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 } else {
-                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().playerAlreadyHaveIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
+                    sender.sendMessage(Utils.color(EpicSkyblock.getMessages().notInYourIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
                 }
             } else {
                 sender.sendMessage(Utils.color(EpicSkyblock.getMessages().noIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));

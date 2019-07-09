@@ -13,7 +13,7 @@ import java.util.List;
 public class RegenCommand extends Command {
 
     public RegenCommand() {
-        super(new ArrayList<>(Arrays.asList("regen")), "Regenerate your island","", true);
+        super(new ArrayList<>(Arrays.asList("regen")), "Regenerate your island", "", true);
     }
 
     @Override
@@ -23,6 +23,7 @@ public class RegenCommand extends Command {
         if (user.getIsland() != null) {
             if (user.getIsland().getOwner().equals(p.getName())) {
                 user.getIsland().generateIsland();
+                sender.sendMessage(Utils.color(EpicSkyblock.getMessages().regenIsland.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             } else {
                 sender.sendMessage(Utils.color(EpicSkyblock.getMessages().mustBeIslandOwner.replace("%prefix%", EpicSkyblock.getConfiguration().prefix)));
             }
