@@ -96,6 +96,8 @@ public class Island {
     public int fisherman;
     public int builder;
 
+    private boolean visit;
+
     private NMSUtils.Color borderColor;
 
     public Island(Player owner, Location pos1, Location pos2, Location center, Location home, int id) {
@@ -131,6 +133,7 @@ public class Island {
         builder = 0;
         startvalue = -1;
         borderColor = NMSUtils.Color.Blue;
+        visit = true;
         init();
     }
 
@@ -507,5 +510,13 @@ public class Island {
 
     public void setBorderColor(NMSUtils.Color borderColor) {
         this.borderColor = borderColor;
+    }
+
+    public boolean isVisit() {
+        return visit;
+    }
+
+    public void setVisit(boolean visit) {
+        this.visit = visit;
     }
 }

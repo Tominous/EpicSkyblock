@@ -38,5 +38,8 @@ public class Messages {
     public String leftIsland = "%prefix% &7You have left your island.";
     public String regenIsland = "%prefix% &7Regenerating your island...";
     public String islandValue = "%prefix% &b&l * &7%rank%: &b%value%";
+    public String playersIslandIsPrivate = "%prefix% &7That players island is private.";
+    public String islandNowPrivate = "%prefix% &7Your island is now private.";
+    public String islandNowPublic = "%prefix% &7Your island is now public.";
 
 }
