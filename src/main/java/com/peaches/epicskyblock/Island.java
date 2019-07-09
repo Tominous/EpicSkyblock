@@ -296,11 +296,7 @@ public class Island {
     public void generateIsland() {
         deleteBlocks();
         killEntities();
-        try {
-            EpicSkyblock.getIslandManager().getSchematic().pasteSchematic(getCenter().clone());
-        } catch (IOException e) {
-            EpicSkyblock.getInstance().sendErrorMessage(e);
-        }
+        EpicSkyblock.getIslandManager().pasteSchematic(getCenter().clone());
     }
 
     public void teleportHome(Player p) {

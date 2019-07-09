@@ -39,41 +39,51 @@ public class EpicSkyblock extends JavaPlugin {
     /*
     TODO
     Permissions/Ranks: Owner Moderator Trusted Member
-    Way to edit warps
     Add 1.13 Schematics
+    Way to edit warps
      */
 
     @Override
     public void onEnable() {
         super.onEnable();
-        getDataFolder().mkdir();
-        loadSchematic();
+        Plugin WorldEdit = Bukkit.getPluginManager().getPlugin("WorldEdit");
+        if (WorldEdit != null) {
+            getDataFolder().mkdir();
+            loadSchematic();
 
-        instance = this;
+            instance = this;
 
-        persist = new Persist();
+            persist = new Persist();
 
-        commandManager = new CommandManager("island");
-        commandManager.registerCommands();
+            commandManager = new CommandManager("island");
+            commandManager.registerCommands();
 
-        loadConfigs();
-        saveConfigs();
+            loadConfigs();
+            saveConfigs();
 
-        registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity(), new onPlayerExpChange(), new onPlayerFish(), new onEntityExplode());
+            registerListeners(new onBlockBreak(), new onBlockPlace(), new onClick(), new onBlockFromTo(), new onPlayerMove(), new onInventoryClick(), new onSpawnerSpawn(), new onEntityDeath(), new onPlayerJoinLeave(), new onBlockGrow(), new onPlayerTalk(), new onEntityDamage(), new onEntityDamageByEntity(), new onPlayerExpChange(), new onPlayerFish(), new onEntityExplode());
 
-        new Metrics(this);
+            new Metrics(this);
 
-        Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> getPersist().save(islandManager), 0, 20);
+            Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, () -> getPersist().save(islandManager), 0, 20);
 
-        setupPlaceholderAPI();
+            setupPlaceholderAPI();
 
-        startCounting();
+            startCounting();
 
-        getLogger().info("-------------------------------");
-        getLogger().info("");
-        getLogger().info(getDescription().getName() + " Enabled!");
-        getLogger().info("");
-        getLogger().info("-------------------------------");
+            getLogger().info("-------------------------------");
+            getLogger().info("");
+            getLogger().info(getDescription().getName() + " Enabled!");
+            getLogger().info("");
+            getLogger().info("-------------------------------");
+        } else {
+            getLogger().info("-------------------------------");
+            getLogger().info("");
+            getLogger().info("Failed to load World Edit");
+            getLogger().info("");
+            getLogger().info("-------------------------------");
+            Bukkit.getPluginManager().disablePlugin(this);
+        }
     }
 
     public void startCounting() {
@@ -144,11 +154,11 @@ public class EpicSkyblock extends JavaPlugin {
     }
 
     public void saveConfigs() {
-        persist.save(configuration);
-        persist.save(missions);
-        persist.save(islandManager);
-        persist.save(messages);
-        persist.save(oreGen);
+        if (configuration != null) persist.save(configuration);
+        if (missions != null) persist.save(missions);
+        if (islandManager != null) persist.save(islandManager);
+        if (messages != null) persist.save(messages);
+        if (oreGen != null) persist.save(oreGen);
     }
 
     @Override

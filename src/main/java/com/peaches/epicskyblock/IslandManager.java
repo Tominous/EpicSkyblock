@@ -1,5 +1,13 @@
 package com.peaches.epicskyblock;
 
+import com.sk89q.worldedit.EditSession;
+import com.sk89q.worldedit.bukkit.BukkitWorld;
+import com.sk89q.worldedit.extent.clipboard.Clipboard;
+import com.sk89q.worldedit.extent.clipboard.io.ClipboardFormats;
+import com.sk89q.worldedit.function.operation.Operation;
+import com.sk89q.worldedit.function.operation.Operations;
+import com.sk89q.worldedit.math.BlockVector3;
+import com.sk89q.worldedit.session.ClipboardHolder;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -7,6 +15,7 @@ import org.bukkit.WorldCreator;
 import org.bukkit.entity.Player;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,8 +36,6 @@ public class IslandManager {
         makeWorld();
         nextLocation = new Location(getWorld(), 0, 0, 0);
     }
-
-    private transient Schematic schematic;
 
     public World getWorld() {
         return Bukkit.getWorld(worldName);
@@ -80,20 +87,26 @@ public class IslandManager {
         new WorldCreator(worldName).generator(new SkyblockGenerator());
     }
 
-    public Schematic getSchematic() throws IOException {
+    public void pasteSchematic(Location loc) {
         File schematicFolder = new File(EpicSkyblock.getInstance().getDataFolder(), "schematics");
-        if (!schematicFolder.exists()) {
-            schematicFolder.mkdir();
-        }
         File schematicFile = new File(schematicFolder, "island.schematic");
-
-        if (!schematicFile.exists()) {
-            if (EpicSkyblock.getInstance().getResource("schematics/island.schematic") != null) {
-                EpicSkyblock.getInstance().saveResource("schematics/island.schematic", false);
+        if (Bukkit.getPluginManager().getPlugin("WorldEdit").getDescription().getVersion().contains("7.")) {
+            try {
+                Clipboard clipboard = ClipboardFormats.findByFile(schematicFile).getReader(new FileInputStream(schematicFile)).read();
+                EditSession editSession = com.sk89q.worldedit.WorldEdit.getInstance().getEditSessionFactory().getEditSession(new BukkitWorld(loc.getWorld()), -1);
+                Operation operation = (new ClipboardHolder(clipboard)).createPaste(editSession).to(BlockVector3.at(loc.getBlockX(), loc.getBlockY(), loc.getBlockZ())).ignoreAirBlocks(true).build();
+                Operations.complete(operation);
+                editSession.close();
+            } catch (Exception e) {
+                EpicSkyblock.getInstance().sendErrorMessage(e);
+            }
+        } else {
+            try {
+                Schematic.loadSchematic(schematicFile).pasteSchematic(loc);
+            } catch (Exception e) {
+                EpicSkyblock.getInstance().sendErrorMessage(e);
             }
         }
-        if (schematic == null) schematic = Schematic.loadSchematic(schematicFile);
-        return schematic;
     }
 
     public Island getIslandViaLocation(Location loc) {

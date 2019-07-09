@@ -3,7 +3,7 @@ version: 2.0.1
 description: Skyblock Redefined
 main: com.peaches.epicskyblock.EpicSkyblock
 author: Peaches_MLG
-softdepend: [PlaceholderAPI]
+softdepend: [PlaceholderAPI, WorldEdit]
 commands:
   island:
     aliases: ["is", "EpicSkyblock"]
