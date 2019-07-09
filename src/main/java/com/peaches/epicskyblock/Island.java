@@ -195,10 +195,10 @@ public class Island {
         this.value = v;
         if (startvalue == -1) startvalue = v;
 
-        if (competitor > -1) {
+        if (competitor != Integer.MIN_VALUE) {
             this.competitor = v - startvalue;
             if (competitor >= EpicSkyblock.getMissions().competitor.getAmount()) {
-                competitor = -1;
+                competitor = Integer.MIN_VALUE;
                 completeMission("Competitor", EpicSkyblock.getMissions().competitor.getReward());
             }
         }
