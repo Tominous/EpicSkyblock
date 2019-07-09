@@ -39,7 +39,6 @@ public class EpicSkyblock extends JavaPlugin {
     /*
     TODO
     Permissions/Ranks: Owner Moderator Trusted Member
-    Add 1.13 Schematics
     Way to edit warps
      */
 
